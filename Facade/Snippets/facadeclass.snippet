@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>facadeclass</Title>
+      <Shortcut>facadeclass</Shortcut>
+      <Description>Code snippet for Façade</Description>
+      <Author>Neogrid</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>facadename</ID>
+                <ToolTip>Façade Name</ToolTip>
+                <Default>FacadeName</Default>
+            </Literal>
+            <Literal>
+                <ID>domainservice</ID>
+                <ToolTip>Domain Service Name</ToolTip>
+                <Default>DomainServiceName</Default>
+            </Literal>
+            <Literal>
+                <ID>inputfield</ID>
+                <ToolTip>Input Field</ToolTip>
+                <Default>InputField</Default>
+            </Literal>
+            <Literal>
+                <ID>outputfield</ID>
+                <ToolTip>Output Field</ToolTip>
+                <Default>OutputField</Default>
+            </Literal>
+        </Declarations>
+      <Code Language="csharp"><![CDATA[public class $facadename$ : FacadeBase<$facadename$Input, $facadename$Output>
+    {
+        public override async Task<$facadename$Output> Execute(IDomainBase domain, $facadename$Input input, $facadename$Output output)
+        {
+            output.$outputfield$ = await ((I$domainservice$)domain).$facadename$(input.$inputfield$);
+
+            return output;
+        }
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

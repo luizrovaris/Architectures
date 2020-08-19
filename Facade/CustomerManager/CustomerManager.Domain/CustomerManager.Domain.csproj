@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CustomerManager.Infrastructure.Domain" Version="1.0.1" />
+    <PackageReference Include="CustomerManager.Infrastructure.Model" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerManager.Entity\CustomerManager.Entity.csproj" />
+    <ProjectReference Include="..\CustomerManager.Integration\CustomerManager.Integration.csproj" />
+    <ProjectReference Include="..\CustomerManager.Model\CustomerManager.Model.csproj" />
+  </ItemGroup>
+
+</Project>

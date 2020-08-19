@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CustomerManager.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CustomerManager.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CustomerManager.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomerManager.Entity.dll": {}
+        }
+      },
+      "CustomerManager.Integration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CustomerManager.Integration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomerManager.Integration.dll": {}
+        }
+      },
+      "CustomerManager.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CustomerManager.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomerManager.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CustomerManager.Entity/1.0.0": {
+      "type": "project",
+      "path": "../CustomerManager.Entity/CustomerManager.Entity.csproj",
+      "msbuildProject": "../CustomerManager.Entity/CustomerManager.Entity.csproj"
+    },
+    "CustomerManager.Integration/1.0.0": {
+      "type": "project",
+      "path": "../CustomerManager.Integration/CustomerManager.Integration.csproj",
+      "msbuildProject": "../CustomerManager.Integration/CustomerManager.Integration.csproj"
+    },
+    "CustomerManager.Model/1.0.0": {
+      "type": "project",
+      "path": "../CustomerManager.Model/CustomerManager.Model.csproj",
+      "msbuildProject": "../CustomerManager.Model/CustomerManager.Model.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "CustomerManager.Entity >= 1.0.0",
+      "CustomerManager.Integration >= 1.0.0",
+      "CustomerManager.Model >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\e997\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Domain\\CustomerManager.Domain.csproj",
+      "projectName": "CustomerManager.Domain",
+      "projectPath": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Domain\\CustomerManager.Domain.csproj",
+      "packagesPath": "C:\\Users\\e997\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\e997\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architecture\\Facade\\CustomerManager.Infrastructure": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Entity\\CustomerManager.Entity.csproj": {
+              "projectPath": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Entity\\CustomerManager.Entity.csproj"
+            },
+            "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Integration\\CustomerManager.Integration.csproj": {
+              "projectPath": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Integration\\CustomerManager.Integration.csproj"
+            },
+            "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Model\\CustomerManager.Model.csproj": {
+              "projectPath": "C:\\Users\\e997\\OneDrive\\Documentos\\Profissional\\2019_ITSector\\Projs\\Samples\\Architectures\\Facade\\CustomerManager\\CustomerManager.Model\\CustomerManager.Model.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

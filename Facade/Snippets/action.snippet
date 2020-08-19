@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>action</Title>
+      <Shortcut>action</Shortcut>
+      <Description>Code snippet for Controller Action</Description>
+      <Author>Neogrid</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>actionname</ID>
+                <ToolTip>Action Name</ToolTip>
+                <Default>ActionName</Default>
+            </Literal>
+            <Literal>
+                <ID>facadename</ID>
+                <ToolTip>Façade Name</ToolTip>
+                <Default>FacadeName</Default>
+            </Literal>
+        </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[HttpGet]
+        [Route("api/v1/...")]
+        public async Task<IActionResult> $actionname$(int Id)
+        {
+            IActionResult result = null;
+            $facadename$Input request = MyAdapter.Adapt$facadename$(Id);
+            $facadename$Output response = null;
+
+            response = await this.facadeOrchestrator.$facadename$(request);
+
+            result = base.GetActionResult(response);
+
+            return result;
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
