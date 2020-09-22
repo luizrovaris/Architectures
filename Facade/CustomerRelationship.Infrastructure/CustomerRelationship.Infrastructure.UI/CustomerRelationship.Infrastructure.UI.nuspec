@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>CustomerRelationship.Infrastructure.UI</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Luiz Eduardo Rovaris</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/luizrovaris/Architectures/tree/master/Facade/CustomerRelationship.Infrastructure</projectUrl>
+    <description>Infrastructure utilities from user interface</description>
+    <releaseNotes>-</releaseNotes>
+    <copyright></copyright>
+    <tags></tags>
+  </metadata>
+</package>

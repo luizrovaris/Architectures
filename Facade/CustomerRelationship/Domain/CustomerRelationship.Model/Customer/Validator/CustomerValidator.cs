@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CustomerRelationship.Model.Customer.Validator
 {
-    public class CustomerValidator : AbstractValidator<Customer>
+    public class CustomerValidator : AbstractValidator<CustomerModel>
     {
         public CustomerValidator()
         {

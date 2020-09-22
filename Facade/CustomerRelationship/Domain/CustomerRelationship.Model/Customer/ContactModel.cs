@@ -2,7 +2,7 @@
 
 namespace CustomerRelationship.Model.Customer
 {
-    public partial class Contact : AuditableBaseEntity
+    public partial class ContactModel : AuditableBaseEntity
     {
         public int CustomerId { get; set; }
         public string Name { get; set; }
@@ -10,6 +10,6 @@ namespace CustomerRelationship.Model.Customer
         public string Phone { get; set; }
         public string CellPhone { get; set; }
 
-        public Customer Customer { get; set; }
+        public CustomerModel Customer { get; set; }
     }
 }
