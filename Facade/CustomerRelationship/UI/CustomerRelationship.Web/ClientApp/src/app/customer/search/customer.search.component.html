@@ -1,1 +1,21 @@
 <p class="h4 mb-2">Customers Search</p>
+<p *ngIf="!customers">Loading...</p>
+
+<div class="container-fluid">
+  <table class="table table-hover" *ngIf="customers">
+    <thead>
+      <tr>
+        <th class="col-4">Federal Identification</th>
+        <th class="col-6">Name</th>
+        <th class="col-2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let c of customers">
+        <td class="col-4">{{c.federalIdentification}}</td>
+        <td class="col-6">{{c.name}}</td>
+        <td class="col-2">Edit</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
