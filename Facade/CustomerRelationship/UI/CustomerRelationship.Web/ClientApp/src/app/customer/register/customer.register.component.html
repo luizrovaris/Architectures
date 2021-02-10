@@ -1,0 +1,12 @@
+<form class="form-control">
+  <p class="h4 title">Customer</p>
+
+  <label for="inputName" class="sr-only">Name</label>
+  <input type="text" id="inputName" name="customerName" placeholder="Customer's name"
+         class="form-control mb-2 col-md-6" [(ngModel)]="customer.name" #name="ngModel"
+         required />
+  <label for="inputFederalIdentification" class="sr-only">Federal Identification</label>
+  <input type="text" id="inputFederalIdentification" name="customerFederalIdentification" placeholder="Customer's federal identification"
+         class="form-control mb-2 col-md-6" [(ngModel)]="customer.federalIdentification" #federalIdentification="ngModel"
+         required />
+</form>
