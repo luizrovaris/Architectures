@@ -1,6 +1,7 @@
 <p class="h4 mb-2">Customers Search</p>
 <p *ngIf="!customers">Loading...</p>
 
+<button class="btn btn-primary mb-2" (click)="addCustomer()">Add</button>
 <div class="container-fluid">
   <table class="table table-hover" *ngIf="customers">
     <thead>

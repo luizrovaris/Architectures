@@ -1,6 +1,6 @@
 export class Customer {
   public id: number;
-  public federalIdentificatin: string;
+  public federalIdentification: string;
   public name: string;
   //address & type
 }
