@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import { Customer } from "../../model/Customer";
 
 @Component({
@@ -8,4 +9,12 @@ import { Customer } from "../../model/Customer";
 })
 export class CustomerRegisterComponent {
   public customer: Customer;
+
+  constructor(private router: Router) {
+
+  }
+
+  public addCustomer() {
+    this.router.navigate['/customer-register'];
+  }
 }

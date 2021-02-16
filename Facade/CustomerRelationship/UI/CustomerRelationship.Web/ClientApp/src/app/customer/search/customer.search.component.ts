@@ -17,8 +17,16 @@ export class CustomerSearchComponent {
 
   public getAllCustomers() {
     this.customers = [
-      { id: 1, federalIdentification: "1234", name: "Customer 1" },
-      { id: 2, federalIdentification: "1235", name: "Customer 2" }];
+      { id: 1, federalIdentification: "1234", name: "Customer 1", address: "Address1" },
+      { id: 2, federalIdentification: "1235", name: "Customer 2", address: "Address2" }];
+
+  }
+
+  public editCustomer(customer: Customer) {
+
+  }
+
+  public removeCustomer(customerId: number) {
 
   }
 
