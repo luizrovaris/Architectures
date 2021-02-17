@@ -23,7 +23,8 @@ export class CustomerSearchComponent {
   }
 
   public editCustomer(customer: Customer) {
-
+    sessionStorage.setItem('customerEditSession', JSON.stringify(customer));
+    this.router.navigate(['/customer-register']);
   }
 
   public removeCustomer(customerId: number) {
