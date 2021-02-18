@@ -14,12 +14,14 @@ export class CustomerSearchComponent {
     this.getAllCustomers();
   }
 
-
   public getAllCustomers() {
     this.customers = [
       { id: 1, federalIdentification: "1234", name: "Customer 1", address: "Address1" },
       { id: 2, federalIdentification: "1235", name: "Customer 2", address: "Address2" }];
+  }
 
+  public addCustomer() {
+    this.router.navigate(['/customer-register']);
   }
 
   public editCustomer(customer: Customer) {
@@ -28,10 +30,8 @@ export class CustomerSearchComponent {
   }
 
   public removeCustomer(customerId: number) {
-
-  }
-
-  public addCustomer() {
-    this.router.navigate(['/customer-register']);
+    if (confirm("Are you sure you want to permanently delete this customer?") == true) {
+      //this.productService.delete();....
+    }
   }
 }
