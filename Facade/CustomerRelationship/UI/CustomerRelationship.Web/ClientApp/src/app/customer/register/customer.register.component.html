@@ -15,4 +15,14 @@
   <input type="text" id="inputAddress" name="customerAddress" placeholder="Customer address"
          class="form-control mb-2 col-md-6" [(ngModel)]="customer.address" #address="ngModel"
          required />
+
+  <div class="btn-group mb-2">
+    <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
+      <span class="spinner-border spinner-border-sm" *ngIf="activateSpinner"></span>
+      Save
+    </button>
+    <button class="btn btn-secondary" [routerLink]="['/customer-search']">
+      Cancel
+    </button>
+  </div>
 </form>

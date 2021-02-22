@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <table class="table table-hover" *ngIf="customers">
     <thead>
-      <tr>
+      <tr class="d-flex">
         <th class="col-4">Federal Identification</th>
         <th class="col-6">Name</th>
         <th class="col-2"></th>
@@ -19,7 +19,7 @@
           <div class="btn-group">
             <button class="btn btn-outline-success btn-md fa fa-edit" (click)="editCustomer(c)"></button>
           </div>
-          <div class="btn-group btn-left-margin">
+          <div class="btn-group btn-second-margin">
             <button class="btn btn-outline-danger btn-md fa fa-trash" (click)="removeCustomer(c.id)"></button>
           </div>
         </td>
