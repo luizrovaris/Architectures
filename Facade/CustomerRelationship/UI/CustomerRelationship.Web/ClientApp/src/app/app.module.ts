@@ -9,7 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
+import { AccountReceivableComponent } from './account-receivable/account-receivable.component';
 import { BillingComponent } from './billing/billing.component';
 import { CustomerSearchComponent } from './customer/search/customer.search.component';
 import { CustomerRegisterComponent } from './customer/register/customer.register.component';
@@ -19,7 +19,7 @@ import { CustomerRegisterComponent } from './customer/register/customer.register
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
+    AccountReceivableComponent,
     BillingComponent,
     CustomerSearchComponent,
     CustomerRegisterComponent
@@ -32,7 +32,7 @@ import { CustomerRegisterComponent } from './customer/register/customer.register
     FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: 'account-receivable', component: AccountReceivableComponent },
       { path: 'billing', component: BillingComponent },
       { path: 'customer-search', component: CustomerSearchComponent },
       { path: 'customer-register', component: CustomerRegisterComponent }
