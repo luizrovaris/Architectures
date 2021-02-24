@@ -1,18 +1,38 @@
 <form class="form-control">
   <p class="h4 title">Customer</p>
 
+  <hr />
+
   <label for="inputInvoice" class="sr-only">Invoice</label>
   <input type="text" id="inputInvoice" name="billingInvoice" placeholder="Billing invoice"
          class="form-control mb-2 col-md-6" [(ngModel)]="billing.invoiceNumber" #invoiceNumber="ngModel"
          required />
 
-  <div class="form-group">
-    <div class="input-group">
-      <input class="form-control col-md-3" placeholder="yyyy-mm-dd"
-             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+  <div class="form-inline mb-2 col-md-3">
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" placeholder="Emission Date"
+               name="datepickerBillingEmissionDate" [(ngModel)]="billing.emissionDate" ngbDatepicker #emissionDate="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="emissionDate.toggle()" type="button"></button>
+        </div>
+
+        <input class="form-control form-control-second-margin" placeholder="Due Date"
+               name="datepickerBillingDueDate" [(ngModel)]="billing.dueDate" ngbDatepicker #dueDate="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="dueDate.toggle()" type="button"></button>
+        </div>
       </div>
     </div>
   </div>
+
+  <label for="inputDesc" class="sr-only">Description</label>
+  <input type="text" id="inputDesc" name="billingDesc" placeholder="Description"
+         class="form-control mb-2 col-md-6" [(ngModel)]="billing.description" #description="ngModel"
+         required />
+
+  <label for="inputValue" class="sr-only">Value</label>
+  <input type="text" id="inputValue" name="billingValue" placeholder="Value"
+         class="form-control mb-2 col-md-6" [(ngModel)]="billing.value" #value="ngModel"
+         required />
 </form>
