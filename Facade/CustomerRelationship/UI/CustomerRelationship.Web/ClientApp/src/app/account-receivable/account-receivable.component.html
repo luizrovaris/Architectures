@@ -1,0 +1,29 @@
+<p class="h4 mb-2">Account Receivable</p>
+<p *ngIf="!billings">Loading...</p>
+
+<div class="container-fluid">
+  <table class="table table-hover" *ngIf="billings">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-4">Customer</th>
+        <th class="col-2">Invoice Number</th>
+        <th class="col-1">Value</th>
+        <th class="col-2">Emission Date</th>
+        <th class="col-2">Due Date</th>
+        <th class="col-1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let b of billings">
+        <td class="col-4">{{b.customer.name}}</td>
+        <td class="col-2">{{b.invoiceNumber}}</td>
+        <td class="col-1">{{b.value}}</td>
+        <td class="col-2">{{b.emissionDate}}</td>
+        <td class="col-2">{{b.dueDate}}</td>
+        <td class="col-1">
+          <button class="btn btn-outline-success btn-md fa fa-file-alt"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
