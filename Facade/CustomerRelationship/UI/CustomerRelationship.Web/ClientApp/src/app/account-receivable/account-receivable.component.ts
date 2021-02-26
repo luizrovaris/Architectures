@@ -36,6 +36,7 @@ export class AccountReceivableComponent {
         invoiceNumber: "2310988",
         emissionDate: new Date(2020, 10, 11),
         dueDate: new Date(2021, 10, 10),
+        paymentDate: new Date(2021, 10, 10),
         description: "NF",
         value: 300,
         customer: {

@@ -6,6 +6,7 @@ export class Billing {
   public invoiceNumber: string;
   public emissionDate: Date;
   public dueDate: Date;
+  public paymentDate?: Date;
   public description: string;
   public value: number;
 }
