@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\account-receivable\writteoff\account-receivable.writteoff.component.ts" />
     <None Remove="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
     <None Remove="ClientApp\src\app\model\billing.ts" />
@@ -31,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\account-receivable\writteoff\account-receivable.writteoff.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\search\customer.search.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\billing.ts" />
