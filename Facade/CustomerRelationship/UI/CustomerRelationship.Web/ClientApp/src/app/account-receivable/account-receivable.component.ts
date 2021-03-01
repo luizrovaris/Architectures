@@ -15,6 +15,11 @@ export class AccountReceivableComponent {
     this.getAllBillings();
   }
 
+  public setBillingWritteOff(billing: Billing) {
+    sessionStorage.setItem("billingSession", JSON.stringify(billing));
+    this.router.navigate(['account-receivable-writteoff']);
+  }
+
   public getAllBillings() {
     this.billings = [
       {
@@ -24,6 +29,9 @@ export class AccountReceivableComponent {
         dueDate: new Date(2021, 10, 10),
         description: "NF",
         value: 200,
+        discountValue: 0,
+        increasedValue: 0,
+        receiptValue: 0,
         customer: {
           id: 1,
           federalIdentification: "1234",
@@ -39,6 +47,9 @@ export class AccountReceivableComponent {
         paymentDate: new Date(2021, 10, 10),
         description: "NF",
         value: 300,
+        discountValue: 0,
+        increasedValue: 0,
+        receiptValue: 0,
         customer: {
           id: 2,
           federalIdentification: "1235",

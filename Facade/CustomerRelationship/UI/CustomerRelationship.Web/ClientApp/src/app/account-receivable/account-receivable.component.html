@@ -23,7 +23,9 @@
         <td class="col-2">{{b.emissionDate | date: 'dd/MM/yyyy'}}</td>
         <td class="col-2">{{b.dueDate | date: 'dd/MM/yyyy'}}</td>
         <td class="col-1">
-          <button class="btn btn-outline-success btn-md fa fa-get-pocket" data-toggle="tooltip" data-placement="top" title="To write-off"></button>
+          <button class="btn btn-outline-success btn-md fa fa-get-pocket"
+                  data-toggle="tooltip" data-placement="top" title="To write-off"
+                  (click)="setBillingWritteOff(b)"></button>
         </td>
       </tr>
     </tbody>

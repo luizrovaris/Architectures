@@ -13,6 +13,7 @@ import { AccountReceivableComponent } from './account-receivable/account-receiva
 import { BillingComponent } from './billing/billing.component';
 import { CustomerSearchComponent } from './customer/search/customer.search.component';
 import { CustomerRegisterComponent } from './customer/register/customer.register.component';
+import { AccountReceivableWritteoffComponent } from './account-receivable/writteoff/account-receivable.writteoff.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CustomerRegisterComponent } from './customer/register/customer.register
     NavMenuComponent,
     HomeComponent,
     AccountReceivableComponent,
+    AccountReceivableWritteoffComponent,
     BillingComponent,
     CustomerSearchComponent,
     CustomerRegisterComponent
@@ -33,6 +35,7 @@ import { CustomerRegisterComponent } from './customer/register/customer.register
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'account-receivable', component: AccountReceivableComponent },
+      { path: 'account-receivable-writteoff', component: AccountReceivableWritteoffComponent },
       { path: 'billing', component: BillingComponent },
       { path: 'customer-search', component: CustomerSearchComponent },
       { path: 'customer-register', component: CustomerRegisterComponent }
