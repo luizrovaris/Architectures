@@ -1,0 +1,44 @@
+<form class="form-control">
+  <h1 class="h4 title">Writte-off title</h1>
+
+  <label for="inputCustomer" class="sr-only">Customer</label>
+  <input type="text" id="inputCustomer" name="customerName" placeholder="Customer's name"
+         class="form-control mb-2 col-md-6" [(ngModel)]="billing.customer.name" #customerName="ngModel"
+         readonly />
+
+  <label for="inputInvoice" class="sr-only">Invoice</label>
+  <input type="text" id="inputInvoice" name="inputInvoice" placeholder="Invoice number"
+         class="form-control mb-2 col-md-6" [(ngModel)]="billing.invoiceNumber" #invoice="ngModel"
+         readonly />
+
+  <div class="form-inline mb-2 col-md-3">
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" placeholder="Payment Date"
+               name="datepickerBillingPaymentDate" [(ngModel)]="billing.paymentDate" ngbDatepicker #paymentDate="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="paymentDate.toggle()" type="button"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <label for="inputReceiptValue" class="sr-only">Receipt Value</label>
+  <input type="text" id="inputReceiptValue" name="billingReceiptValue" placeholder="Receipt Value"
+         class="form-control mb-2 col-md-6" [ngModel]="billing.receiptValue | number: '1.2-2'"
+         (ngModelChange)="billing.receiptValue = $event" #receiptValue="ngModel"
+         required />
+
+  <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
+  <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
+         class="form-control mb-2 col-md-6" [ngModel]="billing.increasedValue | number: '1.2-2'"
+         (ngModelChange)="billing.increasedValue = $event"  #increasedValue="ngModel"
+         required />
+
+  <label for="inputDiscountValue" class="sr-only">Discount Value</label>
+  <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
+         class="form-control mb-2 col-md-6" [ngModel]="billing.discountValue | number: '1.2-2'"
+         (ngModelChange)="billing.discountValue = $event"  #discountValue="ngModel"
+         required />
+
+</form>
