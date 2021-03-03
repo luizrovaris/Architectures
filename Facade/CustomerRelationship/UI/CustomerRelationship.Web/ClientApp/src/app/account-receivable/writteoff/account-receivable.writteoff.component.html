@@ -32,13 +32,23 @@
   <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
   <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
          class="form-control mb-2 col-md-6" [ngModel]="billing.increasedValue | number: '1.2-2'"
-         (ngModelChange)="billing.increasedValue = $event"  #increasedValue="ngModel"
+         (ngModelChange)="billing.increasedValue = $event" #increasedValue="ngModel"
          required />
 
   <label for="inputDiscountValue" class="sr-only">Discount Value</label>
   <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
          class="form-control mb-2 col-md-6" [ngModel]="billing.discountValue | number: '1.2-2'"
-         (ngModelChange)="billing.discountValue = $event"  #discountValue="ngModel"
+         (ngModelChange)="billing.discountValue = $event" #discountValue="ngModel"
          required />
+
+  <div class="btn-group mb-2">
+    <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
+      <span class="spinner-border spinner-border-sm" *ngIf="activateSpinner"></span>
+      Save
+    </button>
+    <button class="btn btn-secondary" [routerLink]="['/account-receivable']">
+      Cancel
+    </button>
+  </div>
 
 </form>

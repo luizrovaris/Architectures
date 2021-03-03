@@ -8,7 +8,8 @@ import { Billing } from "../../model/billing";
 })
 export class AccountReceivableWritteoffComponent implements OnInit {
   public billing: Billing;
-  
+  public activateSpinner: boolean;
+
   constructor() {
   }
   ngOnInit(): void {
@@ -17,5 +18,10 @@ export class AccountReceivableWritteoffComponent implements OnInit {
       this.billing = JSON.parse(billingOnSession);
       sessionStorage.setItem("billingSession", null);
     }
+  }
+
+  public save() {
+    this.activateSpinner = true;
+    //Service -> save
   }
 }
