@@ -1,6 +1,6 @@
 ﻿using CustomerRelationship.Model.Base;
 
-namespace CustomerRelationship.Model.Customer
+namespace CustomerRelationship.Model.Entities
 {
     public partial class Contact : AuditableBaseEntity
     {
