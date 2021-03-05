@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mapping\CustomerRelationship.Entity\CustomerRelationship.Entity.csproj" />
+    <ProjectReference Include="..\CustomerRelationship.Model\CustomerRelationship.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CustomerRelationship.Infrastructure.Domain" Version="1.0.1" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.1" />
+  </ItemGroup>
+
 </Project>

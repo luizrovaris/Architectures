@@ -13,6 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.1" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.UI" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.2" />
   </ItemGroup>
 

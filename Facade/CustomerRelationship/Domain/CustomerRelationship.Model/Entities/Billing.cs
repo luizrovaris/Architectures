@@ -1,4 +1,4 @@
-﻿using CustomerRelationship.Model.Base;
+﻿using CustomerRelationship.Infrastructure.Model.BaseModel;
 using System;
 
 namespace CustomerRelationship.Model.Entities

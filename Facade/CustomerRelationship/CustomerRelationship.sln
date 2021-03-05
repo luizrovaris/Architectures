@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D6D44E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Facade", "Domain\CustomerRelationship.Facade\CustomerRelationship.Facade.csproj", "{C2B85414-3755-4572-9A9B-75EA89C506F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.Model", "Domain\CustomerRelationship.Model\CustomerRelationship.Model.csproj", "{9B0BE1D0-41A5-4808-B419-6CED5B838BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Model", "Domain\CustomerRelationship.Model\CustomerRelationship.Model.csproj", "{9B0BE1D0-41A5-4808-B419-6CED5B838BCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{5169FCB9-8186-44D3-B86E-6BA5EED2C6F8}"
 EndProject
@@ -19,17 +19,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B91BFF65-F688-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{CBC83644-844E-478B-AC61-0325EFBCD5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.Integration", "External\CustomerRelationship.Integration\CustomerRelationship.Integration.csproj", "{64336899-A12A-4AD5-AAA7-0AC4A7991CA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Integration", "External\CustomerRelationship.Integration\CustomerRelationship.Integration.csproj", "{64336899-A12A-4AD5-AAA7-0AC4A7991CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.Entity", "Mapping\CustomerRelationship.Entity\CustomerRelationship.Entity.csproj", "{3C57995C-ACCE-4670-BDAB-58F28F3A4103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Entity", "Mapping\CustomerRelationship.Entity\CustomerRelationship.Entity.csproj", "{3C57995C-ACCE-4670-BDAB-58F28F3A4103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.API", "UI\CustomerRelationship.API\CustomerRelationship.API.csproj", "{6442628D-30D2-43B8-B27F-6F877C2F1CCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.API", "UI\CustomerRelationship.API\CustomerRelationship.API.csproj", "{6442628D-30D2-43B8-B27F-6F877C2F1CCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.Web", "UI\CustomerRelationship.Web\CustomerRelationship.Web.csproj", "{9791DEDD-B821-4F2E-A114-4F9149E2ACB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Web", "UI\CustomerRelationship.Web\CustomerRelationship.Web.csproj", "{9791DEDD-B821-4F2E-A114-4F9149E2ACB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.Web.Test", "Test\CustomerRelationship.Web.Test\CustomerRelationship.Web.Test.csproj", "{ED38EF72-DE95-44E4-8DA3-F3A8C178ACF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.Web.Test", "Test\CustomerRelationship.Web.Test\CustomerRelationship.Web.Test.csproj", "{ED38EF72-DE95-44E4-8DA3-F3A8C178ACF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRelationship.API.Test", "Test\CustomerRelationship.API.Test\CustomerRelationship.API.Test.csproj", "{CB50CB1F-2FCA-4ED4-9062-8F77F6CBE002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerRelationship.API.Test", "Test\CustomerRelationship.API.Test\CustomerRelationship.API.Test.csproj", "{CB50CB1F-2FCA-4ED4-9062-8F77F6CBE002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
