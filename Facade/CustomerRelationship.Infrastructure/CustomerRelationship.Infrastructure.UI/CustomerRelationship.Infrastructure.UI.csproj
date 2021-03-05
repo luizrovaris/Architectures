@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CustomerRelationship.Infrastructure\CustomerRelationship.Infrastructure.Model.csproj" />
+    <ProjectReference Include="..\CustomerRelationship.Infrastructure.Model\CustomerRelationship.Infrastructure.Model.csproj" />
   </ItemGroup>
 
 </Project>
