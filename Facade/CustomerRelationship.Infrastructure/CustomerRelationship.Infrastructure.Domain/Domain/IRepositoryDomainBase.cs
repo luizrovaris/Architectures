@@ -1,6 +1,7 @@
 ﻿using CustomerRelationship.Infrastructure.Model.BaseModel;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CustomerRelationship.Infrastructure.Domain.Domain
 {
@@ -11,10 +12,10 @@ namespace CustomerRelationship.Infrastructure.Domain.Domain
     public interface IRepositoryDomainBase<TEntity> : IDisposable, IDomainBase
            where TEntity : IdentificationBaseEntity
     {
-        void Add(TEntity entity);
-        TEntity GetEntityById(int id);
-        IEnumerable<TEntity> GetAll();
-        void Update(TEntity entity);
-        void Delete(int id);
+        Task AddAsync(TEntity entity);
+        Task<TEntity> GetEntityByIdAsync(int id);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task UpdateAsync(TEntity entity);
+        Task DeleteAsync(int id);
     }
 }
