@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CustomerRelationship.Infrastructure.Domain" Version="1.0.1" />
-    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.1" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Domain" Version="1.0.2" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

@@ -13,8 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.1" />
-    <PackageReference Include="CustomerRelationship.Infrastructure.UI" Version="1.0.1" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.2" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.UI" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.2" />
   </ItemGroup>
 
@@ -31,6 +31,11 @@
     <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
     <None Remove="ClientApp\src\app\model\billing.ts" />
     <None Remove="ClientApp\src\app\model\Customer.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\CustomerRelationship.Facade\CustomerRelationship.Facade.csproj" />
+    <ProjectReference Include="..\..\Domain\CustomerRelationship.Model\CustomerRelationship.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
