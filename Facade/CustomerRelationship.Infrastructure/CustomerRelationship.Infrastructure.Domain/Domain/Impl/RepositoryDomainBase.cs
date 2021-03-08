@@ -1,7 +1,6 @@
 ﻿using CustomerRelationship.Infrastructure.Model.BaseModel;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CustomerRelationship.Infrastructure.Domain.Domain.Impl
