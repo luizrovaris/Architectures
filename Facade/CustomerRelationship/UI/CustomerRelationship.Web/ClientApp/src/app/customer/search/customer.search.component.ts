@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { Customer } from "../../model/Customer";
+import { CustomerService } from "../../services/customer/customer.service";
 
 @Component({
   selector: "customer-search",
@@ -10,14 +11,20 @@ import { Customer } from "../../model/Customer";
 export class CustomerSearchComponent {
     public customers: Customer[];
 
-  constructor(private router: Router) {
+  constructor(private customerService: CustomerService, private router: Router) {
     this.getAllCustomers();
   }
 
   public getAllCustomers() {
-    this.customers = [
-      { id: 1, federalIdentification: "1234", name: "Customer 1", address: "Address1" },
-      { id: 2, federalIdentification: "1235", name: "Customer 2", address: "Address2" }];
+    this.customerService.getAllCustomers()
+      .subscribe(
+        success => {
+          this.customers = success;
+        },
+        error => {
+          console.log(error.error);
+        }
+      );
   }
 
   public addCustomer() {
