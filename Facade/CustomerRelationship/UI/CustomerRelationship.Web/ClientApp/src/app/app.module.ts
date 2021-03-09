@@ -14,6 +14,7 @@ import { BillingComponent } from './billing/billing.component';
 import { CustomerSearchComponent } from './customer/search/customer.search.component';
 import { CustomerRegisterComponent } from './customer/register/customer.register.component';
 import { AccountReceivableWritteoffComponent } from './account-receivable/writteoff/account-receivable.writteoff.component';
+import { CustomerService } from './services/customer/customer.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { AccountReceivableWritteoffComponent } from './account-receivable/writte
       { path: 'customer-register', component: CustomerRegisterComponent }
     ])
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
