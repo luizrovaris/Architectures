@@ -12,7 +12,6 @@ export class CustomerRegisterComponent implements OnInit {
   public activateSpinner: boolean;
 
   constructor(private router: Router) {
-
   }
   ngOnInit(): void {
     var customerOnSession = sessionStorage.getItem("customerEditSession");
