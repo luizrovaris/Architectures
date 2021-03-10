@@ -1,11 +1,14 @@
 using CustomerRelationship.Entity.DataContext;
+using CustomerRelationship.Facade.Orchestration.CustomerRelationship;
+using CustomerRelationship.Facade.Orchestration.CustomerRelationship.Impl;
+using CustomerRelationship.Facade.Plumbing;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 
 namespace CustomerRelationship.Web
 {
@@ -22,6 +25,10 @@ namespace CustomerRelationship.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CustomerRelationshipContext>(opt => opt.UseLazyLoadingProxies().UseMySql(Configuration.GetConnectionString("CustomerRelationshipDB"), m => m.MigrationsAssembly("CustomerRelationship.Entity")));
+
+            //Façades
+            services.AddTransient<IFacadeOrchestratorCustomer, FacadeOrchestratorCustomer>();
+            services.AddFacadeDependency(this.Configuration);
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
