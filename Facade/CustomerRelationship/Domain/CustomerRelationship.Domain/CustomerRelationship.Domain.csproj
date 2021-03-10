@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CustomerRelationship.Infrastructure.Domain" Version="1.0.2" />
-    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.2" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Domain" Version="1.0.3" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.3" />
   </ItemGroup>
 
 </Project>

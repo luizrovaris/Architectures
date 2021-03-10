@@ -13,9 +13,11 @@ namespace CustomerRelationship.Model.Entities
 
         public string Name { get; set; }
         public string FederalIdentification { get; set; }
-        public string Address { get; set; }
 
-        public IList<Contact> Contacts { get; set; }
-        public IList<Billing> Billings { get; set; }
+        public int AddressId { get; set; }
+        public virtual Address Address { get; set; }
+
+        public virtual IList<Contact> Contacts { get; set; }
+        public virtual IList<Billing> Billings { get; set; }
     }
 }

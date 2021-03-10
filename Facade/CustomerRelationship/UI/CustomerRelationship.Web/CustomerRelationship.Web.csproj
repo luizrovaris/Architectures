@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
@@ -13,9 +13,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.2" />
-    <PackageReference Include="CustomerRelationship.Infrastructure.UI" Version="1.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.2" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.Model" Version="1.0.3" />
+    <PackageReference Include="CustomerRelationship.Infrastructure.UI" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +34,7 @@
     <None Remove="ClientApp\src\app\account-receivable\writteoff\account-receivable.writteoff.component.ts" />
     <None Remove="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
+    <None Remove="ClientApp\src\app\model\address.ts" />
     <None Remove="ClientApp\src\app\model\billing.ts" />
     <None Remove="ClientApp\src\app\model\Customer.ts" />
     <None Remove="ClientApp\src\app\services\customer\customer.service.ts" />
@@ -43,6 +49,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\account-receivable\writteoff\account-receivable.writteoff.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\search\customer.search.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\address.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\billing.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\customer.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\customer\customer.service.ts" />
