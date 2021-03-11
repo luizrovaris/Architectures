@@ -30,7 +30,7 @@ namespace CustomerRelationship.Web.Controllers
 
                 if (output.Success)
                 {
-                    result = Ok(output);
+                    result = Ok(output.Customers);
                 }
                 else
                 {
