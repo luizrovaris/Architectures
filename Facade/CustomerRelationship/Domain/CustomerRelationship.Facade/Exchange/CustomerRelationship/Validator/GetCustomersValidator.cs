@@ -2,7 +2,7 @@
 
 namespace CustomerRelationship.Facade.Exchange.CustomerRelationship.Validator
 {
-    class GetCustomersValidator : AbstractValidator<GetCustomersInput>
+    public class GetCustomersValidator : AbstractValidator<GetCustomersInput>
     {
     }
 }

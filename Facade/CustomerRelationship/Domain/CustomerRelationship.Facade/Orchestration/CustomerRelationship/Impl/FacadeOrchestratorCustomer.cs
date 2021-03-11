@@ -21,5 +21,11 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Impl
             GetCustomersOutput output = await Orchestrator.Execute<GetCustomers, GetCustomersInput, GetCustomersOutput, GetCustomersValidator>(_customerManager, input);
             return output;
         }
+
+        public async Task<AddCustomerOutput> AddCustomerAsync(AddCustomerInput input)
+        {
+            AddCustomerOutput output = await Orchestrator.Execute<AddCustomer, AddCustomerInput, AddCustomerOutput, AddCustomerValidator>(_customerManager, input);
+            return output;
+        }
     }
 }
