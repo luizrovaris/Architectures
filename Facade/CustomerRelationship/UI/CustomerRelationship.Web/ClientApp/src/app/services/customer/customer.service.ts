@@ -24,4 +24,9 @@ export class CustomerService implements OnInit {
   public getAllCustomers(): Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.baseUrl + "api/customer", { headers: this.header });
   }
+
+  public saveCustomer(customer: Customer) {
+
+    return this.httpClient.post<Customer>(this.baseUrl + "api/customer", JSON.stringify(customer), { headers: this.header });
+  }
 }

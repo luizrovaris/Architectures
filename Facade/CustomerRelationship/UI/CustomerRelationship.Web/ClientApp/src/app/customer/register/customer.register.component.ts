@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Customer } from "../../model/Customer";
+import { CustomerService } from "../../services/customer/customer.service";
 
 @Component({
   selector: "customer-register",
@@ -11,7 +12,7 @@ export class CustomerRegisterComponent implements OnInit {
   public customer: Customer;
   public activateSpinner: boolean;
 
-  constructor(private router: Router) {
+  constructor(private customerService: CustomerService, private router: Router) {
   }
   ngOnInit(): void {
     var customerOnSession = sessionStorage.getItem("customerEditSession");
@@ -25,16 +26,16 @@ export class CustomerRegisterComponent implements OnInit {
 
   public save() {
     this.activateSpinner = true;
-    //this.customerService.save(this.customer)
-    //  .subscribe(
-    //    customerJson => {
-    //      this.activateSpinner = false;
-    //      this.router.navigate(['/customer-search']);
-    //    },
-    //    e => {
-    //      this.message = e.error;
-    //      this.activateSpinner = false;
-    //    }
-    //  );
+    this.customerService.saveCustomer(this.customer)
+      .subscribe(
+        customerJson => {
+          this.activateSpinner = false;
+          this.router.navigate(['/customer-search']);
+        },
+        e => {
+          //this.message = e.error;
+          this.activateSpinner = false;
+        }
+      );
   }
 }

@@ -19,7 +19,7 @@ export class CustomerSearchComponent {
     this.customerService.getAllCustomers()
       .subscribe(
         success => {
-          this.customers = success;
+          this.customers = success.customers;
         },
         error => {
           console.log(error.error);
