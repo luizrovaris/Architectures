@@ -11,6 +11,7 @@ import { CustomerService } from "../../services/customer/customer.service";
 export class CustomerRegisterComponent implements OnInit {
   public customer: Customer;
   public activateSpinner: boolean;
+  public message: string;
 
   constructor(private customerService: CustomerService, private router: Router) {
   }
@@ -28,12 +29,12 @@ export class CustomerRegisterComponent implements OnInit {
     this.activateSpinner = true;
     this.customerService.saveCustomer(this.customer)
       .subscribe(
-        customerJson => {
-          this.activateSpinner = false;
-          this.router.navigate(['/customer-search']);
+        () => {
+            this.activateSpinner = false;
+            this.router.navigate(['/customer-search']);
         },
-        e => {
-          //this.message = e.error;
+        error => {
+          this.message = error.error;
           this.activateSpinner = false;
         }
       );
