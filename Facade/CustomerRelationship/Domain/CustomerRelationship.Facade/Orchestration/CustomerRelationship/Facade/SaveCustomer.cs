@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Facade
 {
-    public class AddCustomer : FacadeBase<AddCustomerInput, AddCustomerOutput>
+    public class SaveCustomer : FacadeBase<SaveCustomerInput, SaveCustomerOutput>
     {
-        public override async Task<AddCustomerOutput> Execute(IDomainBase domain, AddCustomerInput input, AddCustomerOutput output)
+        public override async Task<SaveCustomerOutput> Execute(IDomainBase domain, SaveCustomerInput input, SaveCustomerOutput output)
         {
-            await ((ICustomerManager)domain).AddAsync(input.Customer);
+            await ((ICustomerManager)domain).SaveAsync(input.Customer);
 
             return output;
         }

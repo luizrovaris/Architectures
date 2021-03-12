@@ -2,7 +2,7 @@
 
 namespace CustomerRelationship.Facade.Exchange.CustomerRelationship
 {
-    public class AddCustomerOutput : FacadeResponseBase
+    public class SaveCustomerOutput : FacadeResponseBase
     {
     }
 }

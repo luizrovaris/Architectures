@@ -3,7 +3,7 @@ using CustomerRelationship.Model.Entities;
 
 namespace CustomerRelationship.Facade.Exchange.CustomerRelationship
 {
-    public class AddCustomerInput : FacadeRequestBase
+    public class SaveCustomerInput : FacadeRequestBase
     {
         public Customer Customer { get; set; }
     }

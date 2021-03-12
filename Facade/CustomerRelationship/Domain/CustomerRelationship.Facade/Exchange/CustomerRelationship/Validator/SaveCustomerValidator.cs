@@ -2,9 +2,9 @@
 
 namespace CustomerRelationship.Facade.Exchange.CustomerRelationship.Validator
 {
-    public class AddCustomerValidator : AbstractValidator<AddCustomerInput>
+    public class SaveCustomerValidator : AbstractValidator<SaveCustomerInput>
     {
-        public AddCustomerValidator()
+        public SaveCustomerValidator()
         {
             RuleFor(x => x.Customer).NotNull();
         }

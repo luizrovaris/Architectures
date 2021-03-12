@@ -49,13 +49,13 @@ namespace CustomerRelationship.Web.Controllers
         public async Task<IActionResult> Post([FromBody] Customer customer)
         {
             ActionResult result;
-            var input = new AddCustomerInput();
-            AddCustomerOutput output;
+            var input = new SaveCustomerInput();
+            SaveCustomerOutput output;
 
             try
             {
                 input.Customer = customer;
-                output = await this._facadeOrchestratorCustomer.AddCustomerAsync(input);
+                output = await this._facadeOrchestratorCustomer.SaveCustomerAsync(input);
 
                 if (output.Success)
                 {

@@ -22,9 +22,9 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Impl
             return output;
         }
 
-        public async Task<AddCustomerOutput> AddCustomerAsync(AddCustomerInput input)
+        public async Task<SaveCustomerOutput> SaveCustomerAsync(SaveCustomerInput input)
         {
-            AddCustomerOutput output = await Orchestrator.Execute<AddCustomer, AddCustomerInput, AddCustomerOutput, AddCustomerValidator>(_customerManager, input);
+            SaveCustomerOutput output = await Orchestrator.Execute<SaveCustomer, SaveCustomerInput, SaveCustomerOutput, SaveCustomerValidator>(_customerManager, input);
             return output;
         }
     }
