@@ -28,6 +28,7 @@ export class CustomerSearchComponent {
   }
 
   public addCustomer() {
+    sessionStorage.setItem('customerEditSession', '');
     this.router.navigate(['/customer-register']);
   }
 
@@ -38,7 +39,14 @@ export class CustomerSearchComponent {
 
   public removeCustomer(customerId: number) {
     if (confirm("Are you sure you want to permanently delete this customer?") == true) {
-      //this.productService.delete();....
+      this.customerService.deleteCustomer(customerId).subscribe(
+        success => {
+          this.customers = success;
+        },
+        e => {
+          console.log(e.error);
+        }
+      );
     }
   }
 }

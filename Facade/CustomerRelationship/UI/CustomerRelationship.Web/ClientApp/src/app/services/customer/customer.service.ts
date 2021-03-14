@@ -26,7 +26,10 @@ export class CustomerService implements OnInit {
   }
 
   public saveCustomer(customer: Customer) {
-
     return this.httpClient.post<Customer>(this.baseUrl + "api/customer", JSON.stringify(customer), { headers: this.header });
+  }
+
+  public deleteCustomer(customerId: number) {
+    return this.httpClient.delete<Customer[]>(this.baseUrl + "api/customer/" + customerId);
   }
 }
