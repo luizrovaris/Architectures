@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Facade
 {
-    public class GetCustomers : FacadeBase<GetCustomersInput, GetCustomersOutput>
+    internal class GetCustomers : FacadeBase<GetCustomersInput, GetCustomersOutput>
     {
         public override async Task<GetCustomersOutput> Execute(IDomainBase domain, GetCustomersInput input, GetCustomersOutput output)
         {

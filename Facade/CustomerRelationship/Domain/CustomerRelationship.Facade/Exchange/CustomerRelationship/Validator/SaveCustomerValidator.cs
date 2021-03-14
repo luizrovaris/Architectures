@@ -2,7 +2,7 @@
 
 namespace CustomerRelationship.Facade.Exchange.CustomerRelationship.Validator
 {
-    public class SaveCustomerValidator : AbstractValidator<SaveCustomerInput>
+    internal class SaveCustomerValidator : AbstractValidator<SaveCustomerInput>
     {
         public SaveCustomerValidator()
         {

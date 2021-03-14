@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Facade
 {
-    public class SaveCustomer : FacadeBase<SaveCustomerInput, SaveCustomerOutput>
+    internal class SaveCustomer : FacadeBase<SaveCustomerInput, SaveCustomerOutput>
     {
         public override async Task<SaveCustomerOutput> Execute(IDomainBase domain, SaveCustomerInput input, SaveCustomerOutput output)
         {
