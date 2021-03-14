@@ -7,5 +7,6 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship
     {
         Task<GetCustomersOutput> GetCustomersAsync(GetCustomersInput input);
         Task<SaveCustomerOutput> SaveCustomerAsync(SaveCustomerInput input);
+        Task<DeleteCustomerOutput> DeleteCustomerAsync(DeleteCustomerInput input);
     }
 }

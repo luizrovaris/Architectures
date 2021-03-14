@@ -27,5 +27,11 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Impl
             SaveCustomerOutput output = await Orchestrator.Execute<SaveCustomer, SaveCustomerInput, SaveCustomerOutput, SaveCustomerValidator>(_customerManager, input);
             return output;
         }
+
+        public async Task<DeleteCustomerOutput> DeleteCustomerAsync(DeleteCustomerInput input)
+        {
+            DeleteCustomerOutput output = await Orchestrator.Execute<DeleteCustomer, DeleteCustomerInput, DeleteCustomerOutput, DeleteCustomerValidator>(_customerManager, input);
+            return output;
+        }
     }
 }

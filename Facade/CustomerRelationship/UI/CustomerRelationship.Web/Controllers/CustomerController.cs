@@ -73,5 +73,34 @@ namespace CustomerRelationship.Web.Controllers
 
             return result;
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            ActionResult result;
+            var input = new DeleteCustomerInput();
+            DeleteCustomerOutput output;
+
+            try
+            {
+                input.CustomerId = id;
+                output = await this._facadeOrchestratorCustomer.DeleteCustomerAsync(input);
+
+                if (output.Success)
+                {
+                    result = Ok(output.Success);
+                }
+                else
+                {
+                    result = BadRequest(output.GetJoinedErrors());
+                }
+            }
+            catch (Exception ex)
+            {
+                result = BadRequest(ex);
+            }
+
+            return result;
+        }
     }
 }
