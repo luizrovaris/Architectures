@@ -1,6 +1,8 @@
-<form class="form-control">
-  <p class="h4 title">Customer</p>
+<form class="form-control border-0">
+  <p class="h3 title mb-4">Customer</p>
 
+  <h5>Customer basic information</h5>
+  <hr class="mb-2 col-md-8" />
   <div class="mb-2 col-md-8">
     <label for="inputName" class="sr-only">Name</label>
     <input type="text" id="inputName" name="customerName" placeholder="Customer's name"
@@ -18,7 +20,7 @@
     </div>
   </div>
 
-  <div class="mb-2 col-md-8">
+  <div class="mb-4 col-md-8">
     <label for="inputFederalIdentification" class="sr-only">Federal identification</label>
     <input type="text" id="inputFederalIdentification" name="customerFederalIdentification" placeholder="Customer's federal identification"
            class="form-control" [(ngModel)]="customer.federalIdentification"
@@ -35,6 +37,8 @@
     </div>
   </div>
 
+  <h5>Customer address</h5>
+  <hr class="mb-2 col-md-8" />
   <div class="input-group mb-2 col-md-8">
     <span class="input-group-text">Address</span>
     <input type="text" aria-label="Address" name="customerAddress" placeholder="Address"
@@ -55,7 +59,7 @@
     </div>
   </div>
 
-  <div class="mb-2 col-md-8">
+  <div class="mb-4 col-md-8">
     <label for="inputPostalCode" class="sr-only">Zip code</label>
     <input type="text" id="inputPostalCode" name="postalCode" placeholder="Zip code"
            class="form-control" [(ngModel)]="customer.address.postalCode"
@@ -71,6 +75,10 @@
       </div>
     </div>
   </div>
+
+  <h5>Customer contacts</h5>
+  <hr class="mb-2 col-md-8" />
+  <customer-register-contact [contacts]="customer.contacts" (newContactsEvent)="addContact($event)"></customer-register-contact>
 
   <div class="btn-group mb-2">
     <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">

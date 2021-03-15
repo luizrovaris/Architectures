@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { Contact } from "../../model/contact";
 import { Customer } from "../../model/Customer";
 import { CustomerService } from "../../services/customer/customer.service";
 
@@ -10,12 +11,15 @@ import { CustomerService } from "../../services/customer/customer.service";
 })
 export class CustomerRegisterComponent implements OnInit {
   public customer: Customer;
+  public contact: Contact;
   public activateSpinner: boolean;
   public message: string;
 
   constructor(private customerService: CustomerService, private router: Router) {
   }
   ngOnInit(): void {
+    this.contact = new Contact();
+
     var customerOnSession = sessionStorage.getItem("customerEditSession");
     if (customerOnSession) {
       this.customer = JSON.parse(customerOnSession);
@@ -38,5 +42,10 @@ export class CustomerRegisterComponent implements OnInit {
           this.activateSpinner = false;
         }
       );
+  }
+
+  public addContact(newContacts: Contact[]) {
+    /*alert('ADDING ' + JSON.stringify(newContacts))*/
+    this.customer.contacts = newContacts;
   }
 }
