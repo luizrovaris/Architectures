@@ -1,0 +1,69 @@
+
+<div class="row mb-2 col-md-8">
+  <div class="col-md-6">
+    <input type="text" aria-label="Contact" name="customerContact" placeholder="Contact"
+           class="form-control" [(ngModel)]="contact.name"
+           #customerContact="ngModel"
+           [ngClass]="{
+            'is-invalid': customerContact.invalid && (customerContact.dirty || customerContact.touched),
+            'is-valid': customerContact.valid
+           }"
+           required>
+    <div class="invalid-feedback" *ngIf="customerContact.invalid && (customerContact.dirty || customerContact.touched)">
+      <div class="d-inline" *ngIf="customerContact.errors.required">
+        Contact name is required
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <input type="text" aria-label="Email" name="customerEmail" placeholder="Email"
+           class="form-control" [(ngModel)]="contact.email"
+           #email="ngModel"
+           [ngClass]="{
+            'is-invalid': email.invalid && (email.dirty || email.touched),
+            'is-valid': email.valid
+           }"
+           email required>
+    <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div class="d-inline" *ngIf="email.errors.required">
+        Email is required
+      </div>
+      <div class="d-inline" *ngIf="email.errors.email">
+        E-mail invalid
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mb-2 col-md-8">
+  <div class="col-md-6">
+    <input type="text" aria-label="Phone" name="customerPhone" placeholder="Phone"
+           class="form-control" [(ngModel)]="contact.phone">
+  </div>
+  <div class="col-md-6 mb-2">
+    <input type="text" aria-label="CellPhone" name="customerCellPhone" placeholder="CellPhone"
+           class="form-control" [(ngModel)]="contact.cellPhone">
+  </div>
+  <button type="button" id="buttonAddContact" (click)="addContact()" class="btn btn-primary btn-sm">Add contact</button>
+</div>
+<div class="row mb-2 col-md-8">
+  <table class="table table-hover" *ngIf="contacts">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-4">Contact</th>
+        <th class="col-3">Email</th>
+        <th class="col-2">Phone</th>
+        <th class="col-2">CellPhone</th>
+        <th class="col-1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="d-flex" *ngFor="let c of contacts">
+        <td class="col-4">{{c.name}}</td>
+        <td class="col-3">{{c.email}}</td>
+        <td class="col-2">{{c.phone}}</td>
+        <td class="col-2">{{c.cellPhone}}</td>
+        <td class="col-1">--</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -37,11 +37,11 @@ namespace CustomerRelationship.Entity.DataContext
                     .IsRequired(false)
                     .OnDelete(DeleteBehavior.NoAction);
 
-                builder.HasMany(p => p.Contacts)
-                    .WithOne(p => p.Customer)
-                    .HasForeignKey(p => p.CustomerId)
-                    .IsRequired(false)
-                    .OnDelete(DeleteBehavior.NoAction);
+                builder.HasMany(p => p.Contacts);
+                    //.WithOne(p => p.Customer)
+                    //.HasForeignKey(p => p.CustomerId)
+                    //.IsRequired(false)
+                    //.OnDelete(DeleteBehavior.NoAction);
             });
 
             modelBuilder.Entity<Billing>(builder =>

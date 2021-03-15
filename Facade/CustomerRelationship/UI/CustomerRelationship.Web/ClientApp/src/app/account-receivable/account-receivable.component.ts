@@ -36,7 +36,8 @@ export class AccountReceivableComponent {
           id: 1,
           federalIdentification: "1234",
           name: "Customer 1",
-          address: { addressLine1: "Address1", addressLine2: "", postalCode:"0000"}
+          address: { addressLine1: "Address1", addressLine2: "", postalCode: "0000" },
+          contacts: []
         }
       },
       {
@@ -54,7 +55,8 @@ export class AccountReceivableComponent {
           id: 2,
           federalIdentification: "1235",
           name: "Customer 2",
-          address: { addressLine1: "Address2", addressLine2: "", postalCode: "0000" }
+          address: { addressLine1: "Address2", addressLine2: "", postalCode: "0000" },
+          contacts: []
         }
       }
     ];

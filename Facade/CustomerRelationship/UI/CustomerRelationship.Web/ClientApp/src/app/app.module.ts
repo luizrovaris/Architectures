@@ -13,6 +13,7 @@ import { AccountReceivableComponent } from './account-receivable/account-receiva
 import { BillingComponent } from './billing/billing.component';
 import { CustomerSearchComponent } from './customer/search/customer.search.component';
 import { CustomerRegisterComponent } from './customer/register/customer.register.component';
+import { CustomerRegisterContactComponent } from './customer/register/contact/customer.register.contact.component';
 import { AccountReceivableWritteoffComponent } from './account-receivable/writteoff/account-receivable.writteoff.component';
 import { CustomerService } from './services/customer/customer.service';
 
@@ -25,7 +26,8 @@ import { CustomerService } from './services/customer/customer.service';
     AccountReceivableWritteoffComponent,
     BillingComponent,
     CustomerSearchComponent,
-    CustomerRegisterComponent
+    CustomerRegisterComponent,
+    CustomerRegisterContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

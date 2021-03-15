@@ -10,6 +10,6 @@ namespace CustomerRelationship.Model.Entities
         public string CellPhone { get; set; }
 
         public int CustomerId { get; set; }
-        public virtual Customer Customer { get; set; }
+        //public virtual Customer Customer { get; set; }
     }
 }
