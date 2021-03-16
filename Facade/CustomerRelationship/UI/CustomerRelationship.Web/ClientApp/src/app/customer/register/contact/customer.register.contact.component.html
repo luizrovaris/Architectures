@@ -1,4 +1,3 @@
-
 <div class="row mb-2 col-md-8">
   <div class="col-md-6">
     <input type="text" aria-label="Contact" name="customerContact" placeholder="Contact"
@@ -43,27 +42,44 @@
     <input type="text" aria-label="CellPhone" name="customerCellPhone" placeholder="CellPhone"
            class="form-control" [(ngModel)]="contact.cellPhone">
   </div>
-  <button type="button" id="buttonAddContact" (click)="addContact()" class="btn btn-primary btn-sm">Add contact</button>
+  <button type="button" id="buttonSaveContact" (click)="addContact()"
+          class="btn btn-primary btn-sm" *ngIf="isEditing">
+    Save
+  </button>
+  <button type="button" id="buttonAddContact" (click)="addContact()"
+          class="btn btn-primary btn-sm" *ngIf="!isEditing">
+    Add contact
+  </button>
 </div>
 <div class="row mb-2 col-md-8">
   <table class="table table-hover" *ngIf="contacts">
     <thead>
       <tr class="d-flex">
-        <th class="col-4">Contact</th>
+        <th class="col-3">Contact</th>
         <th class="col-3">Email</th>
         <th class="col-2">Phone</th>
         <th class="col-2">CellPhone</th>
-        <th class="col-1"></th>
+        <th class="col-2"></th>
       </tr>
     </thead>
     <tbody>
       <tr class="d-flex" *ngFor="let c of contacts">
-        <td class="col-4">{{c.name}}</td>
+        <td class="col-3">{{c.name}}</td>
         <td class="col-3">{{c.email}}</td>
         <td class="col-2">{{c.phone}}</td>
         <td class="col-2">{{c.cellPhone}}</td>
-        <td class="col-1">--</td>
+        <td class="col-2">
+          <div class="btn-group">
+            <button class="btn btn-outline-success btn-sm fa fa-edit" (click)="editContact(c)"></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-outline-danger btn-sm fa fa-trash" (click)="removeContact(c)"></button>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
+  <div class="alert alert-danger col-md-8" *ngIf="contactMessage">
+    {{contactMessage}}
+  </div>
 </div>
