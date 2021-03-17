@@ -16,6 +16,7 @@ import { CustomerRegisterComponent } from './customer/register/customer.register
 import { CustomerRegisterContactComponent } from './customer/register/contact/customer.register.contact.component';
 import { AccountReceivableWritteoffComponent } from './account-receivable/writteoff/account-receivable.writteoff.component';
 import { CustomerService } from './services/customer/customer.service';
+import { BillingService } from './services/billing/billing.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { CustomerService } from './services/customer/customer.service';
       { path: 'customer-register', component: CustomerRegisterComponent }
     ])
   ],
-  providers: [CustomerService],
+  providers: [CustomerService, BillingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

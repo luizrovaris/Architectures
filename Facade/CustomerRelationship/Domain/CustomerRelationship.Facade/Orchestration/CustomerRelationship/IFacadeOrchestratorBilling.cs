@@ -6,5 +6,6 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship
     public interface IFacadeOrchestratorBilling
     {
         Task<SaveBillingOutput> SaveBillingAsync(SaveBillingInput input);
+        Task<GetBillingsOutput> GetBillingsAsync(GetBillingsInput input);
     }
 }

@@ -21,5 +21,11 @@ namespace CustomerRelationship.Facade.Orchestration.CustomerRelationship.Impl
             SaveBillingOutput output = await Orchestrator.Execute<SaveBilling, SaveBillingInput, SaveBillingOutput, SaveBillingValidator>(_billingManager, input);
             return output;
         }
+
+        public async Task<GetBillingsOutput> GetBillingsAsync(GetBillingsInput input)
+        {
+            GetBillingsOutput output = await Orchestrator.Execute<GetBillings, GetBillingsInput, GetBillingsOutput, GetBillingsValidator>(_billingManager, input);
+            return output;
+        }
     }
 }

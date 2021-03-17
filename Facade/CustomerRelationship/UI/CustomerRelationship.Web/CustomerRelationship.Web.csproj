@@ -39,6 +39,7 @@
     <None Remove="ClientApp\src\app\model\billing.ts" />
     <None Remove="ClientApp\src\app\model\contact.ts" />
     <None Remove="ClientApp\src\app\model\Customer.ts" />
+    <None Remove="ClientApp\src\app\services\billing\billing.service.ts" />
     <None Remove="ClientApp\src\app\services\customer\customer.service.ts" />
   </ItemGroup>
 
@@ -58,6 +59,7 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\model\billing.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\customer.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\billing\billing.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\customer\customer.service.ts" />
   </ItemGroup>
 
