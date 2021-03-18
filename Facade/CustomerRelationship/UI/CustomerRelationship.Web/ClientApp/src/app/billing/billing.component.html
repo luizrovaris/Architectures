@@ -1,14 +1,26 @@
-<form class="form-control">
-  <p class="h4 title">Customer</p>
+<form class="form-control border-0">
+  <p class="h4 title mb-4">Billing</p>
 
-  <hr />
+  <h5>Billing basic information</h5>
+  <hr class="mb-2 col-md-8" />
+  <div class="mb-2 col-md-8">
+    <label for="inputInvoice" class="sr-only">Invoice</label>
+    <input type="text" id="inputInvoice" name="billingInvoice" placeholder="Billing invoice"
+           class="form-control" [(ngModel)]="billing.invoiceNumber"
+           #invoiceNumber="ngModel"
+           [ngClass]="{
+            'is-invalid': invoiceNumber.invalid && (invoiceNumber.dirty || invoiceNumber.touched),
+            'is-valid': invoiceNumber.valid
+           }"
+           required />
+    <div class="invalid-feedback mb-2" *ngIf="invoiceNumber.invalid && (invoiceNumber.dirty || invoiceNumber.touched)">
+      <div *ngIf="invoiceNumber.errors.required">
+        Invoice number is required
+      </div>
+    </div>
+  </div>
 
-  <label for="inputInvoice" class="sr-only">Invoice</label>
-  <input type="text" id="inputInvoice" name="billingInvoice" placeholder="Billing invoice"
-         class="form-control mb-2 col-md-6" [(ngModel)]="billing.invoiceNumber" #invoiceNumber="ngModel"
-         required />
-
-  <div class="form-inline mb-2 col-md-3">
+  <div class="form-inline mb-2 col-md-8">
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" placeholder="Emission Date"
@@ -26,15 +38,40 @@
     </div>
   </div>
 
-  <label for="inputDesc" class="sr-only">Description</label>
-  <input type="text" id="inputDesc" name="billingDesc" placeholder="Description"
-         class="form-control mb-2 col-md-6" [(ngModel)]="billing.description" #description="ngModel"
-         required />
 
-  <label for="inputValue" class="sr-only">Value</label>
-  <input type="text" id="inputValue" name="billingValue" placeholder="Value"
-         class="form-control mb-2 col-md-6" [(ngModel)]="billing.value" #value="ngModel"
-         required />
+  <div class="mb-2 col-md-8">
+    <label for="inputDesc" class="sr-only">Description</label>
+    <input type="text" id="inputDesc" name="billingDesc" placeholder="Description"
+           class="form-control" [(ngModel)]="billing.description"
+           #description="ngModel"
+           [ngClass]="{
+            'is-invalid': description.invalid && (description.dirty || description.touched),
+            'is-valid': description.valid
+           }"
+           required />
+    <div class="invalid-feedback mb-2" *ngIf="description.invalid && (description.dirty || description.touched)">
+      <div *ngIf="description.errors.required">
+        Description is required
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-2 col-md-8">
+    <label for="inputValue" class="sr-only">Value</label>
+    <input type="text" id="inputValue" name="billingValue" placeholder="Value"
+           class="form-control" [(ngModel)]="billing.value"
+           #value="ngModel"
+           [ngClass]="{
+            'is-invalid': value.invalid && (value.dirty || value.touched),
+            'is-valid': value.valid
+           }"
+           required />
+    <div class="invalid-feedback mb-2" *ngIf="value.invalid && (value.dirty || value.touched)">
+      <div *ngIf="value.errors.required">
+        Value is required
+      </div>
+    </div>
+  </div>
 
   <div class="btn-group mb-2">
     <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
