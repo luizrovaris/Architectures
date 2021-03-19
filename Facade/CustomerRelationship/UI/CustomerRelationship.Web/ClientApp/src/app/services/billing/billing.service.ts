@@ -24,4 +24,8 @@ export class BillingService implements OnInit{
   public getAllBillings(): Observable<Billing[]> {
     return this.httpClient.get<Billing[]>(this.baseUrl + "api/billing", { headers: this.header });
   }
+
+  public saveBilling(billing: Billing) {
+    return this.httpClient.post<Billing>(this.baseUrl + "api/billing", JSON.stringify(billing), { headers: this.header });
+  }
 }

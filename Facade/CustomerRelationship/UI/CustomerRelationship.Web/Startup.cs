@@ -28,6 +28,7 @@ namespace CustomerRelationship.Web
 
             //Façades
             services.AddTransient<IFacadeOrchestratorCustomer, FacadeOrchestratorCustomer>();
+            services.AddTransient<IFacadeOrchestratorBilling, FacadeOrchestratorBilling>();
             services.AddFacadeDependency(this.Configuration);
 
             services.AddControllersWithViews();

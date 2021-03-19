@@ -45,7 +45,6 @@ export class CustomerRegisterComponent implements OnInit {
   }
 
   public addContact(newContacts: Contact[]) {
-    /*alert('ADDING ' + JSON.stringify(newContacts))*/
     this.customer.contacts = newContacts;
   }
 }

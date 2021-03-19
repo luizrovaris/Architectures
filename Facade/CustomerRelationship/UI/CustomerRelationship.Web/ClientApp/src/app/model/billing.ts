@@ -9,7 +9,7 @@ export class Billing {
   public paymentDate?: Date;
   public description: string;
   public value: number;
-  public receiptValue: number;
-  public increasedValue: number;
-  public discountValue: number;
+  public receiptValue?: number;
+  public increasedValue?: number;
+  public discountValue?: number;
 }

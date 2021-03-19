@@ -10,6 +10,7 @@ namespace CustomerRelationship.Facade.Plumbing
         public static IServiceCollection AddFacadeDependency(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ICustomerManager, CustomerManager>();
+            services.AddTransient<IBillingManager, BillingManager>();
 
             return services;
         }
