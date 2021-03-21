@@ -28,7 +28,7 @@ import { BillingService } from './services/billing/billing.service';
     BillingComponent,
     CustomerSearchComponent,
     CustomerRegisterComponent,
-    CustomerRegisterContactComponent
+    CustomerRegisterContactComponent 
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
