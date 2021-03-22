@@ -4,6 +4,7 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Billing } from '../model/billing';
 import { Customer } from '../model/Customer';
 import { BillingService } from '../services/billing/billing.service';
+import { CustomerService } from '../services/customer/customer.service';
 
 @Component({
   selector: 'billing',
@@ -12,10 +13,13 @@ import { BillingService } from '../services/billing/billing.service';
 })
 export class BillingComponent implements OnInit {
   public billing: Billing;
+  public selectedCustomer: Customer;
+  public customers: Customer[];
   public activateSpinner: boolean;
   public message: string;
 
-  constructor(private billingService: BillingService, private router: Router) {
+  constructor(private customerService: CustomerService, private billingService: BillingService, private router: Router) {
+    this.getAllCustomers();
   }
   ngOnInit(): void {
     this.billing = new Billing();
@@ -24,7 +28,7 @@ export class BillingComponent implements OnInit {
   public save() {
     this.activateSpinner = true;
 
-    this.billing = this.arrangeDatesFormats(this.billing);    
+    this.billing = this.arrangeDatesFormats(this.billing);
 
     this.billingService.saveBilling(this.billing)
       .subscribe(
@@ -37,6 +41,22 @@ export class BillingComponent implements OnInit {
           this.activateSpinner = false;
         }
       );
+  }
+
+  public getAllCustomers() {
+    this.customerService.getAllCustomers()
+      .subscribe(
+        success => {
+          this.customers = success;
+        },
+        error => {
+          console.log(error.error);
+        }
+      );
+  }
+
+  public selectCustomerChanged() {
+    this.billing.customer = this.selectedCustomer;
   }
 
   private arrangeDatesFormats(billing: Billing): Billing {
