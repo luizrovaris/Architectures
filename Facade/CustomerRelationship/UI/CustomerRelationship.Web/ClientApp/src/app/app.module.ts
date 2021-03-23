@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDateAdapter, NgbDateParserFormatter, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -17,6 +17,8 @@ import { CustomerRegisterContactComponent } from './customer/register/contact/cu
 import { AccountReceivableWritteoffComponent } from './account-receivable/writteoff/account-receivable.writteoff.component';
 import { CustomerService } from './services/customer/customer.service';
 import { BillingService } from './services/billing/billing.service';
+import { CustomDateAdapter } from './helpers/custom.date.adapter';
+import { CustomDateParserFormatter } from './helpers/custom.date.parser.formatter';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { BillingService } from './services/billing/billing.service';
       { path: 'customer-register', component: CustomerRegisterComponent }
     ])
   ],
-  providers: [CustomerService, BillingService],
+  providers: [CustomerService, BillingService,
+              { provide: NgbDateAdapter, useClass: CustomDateAdapter },
+              { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

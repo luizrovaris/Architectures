@@ -35,6 +35,8 @@
     <None Remove="ClientApp\src\app\customer\register\contact\customer.register.contact.component.ts" />
     <None Remove="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
+    <None Remove="ClientApp\src\app\helpers\custom.date.adapter.ts" />
+    <None Remove="ClientApp\src\app\helpers\custom.date.parser.formatter.ts" />
     <None Remove="ClientApp\src\app\model\address.ts" />
     <None Remove="ClientApp\src\app\model\billing.ts" />
     <None Remove="ClientApp\src\app\model\contact.ts" />
@@ -53,6 +55,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\contact\customer.register.contact.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\search\customer.search.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\helpers\custom.date.adapter.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\helpers\custom.date.parser.formatter.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\address.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\contact.ts">
       <SubType>Code</SubType>
