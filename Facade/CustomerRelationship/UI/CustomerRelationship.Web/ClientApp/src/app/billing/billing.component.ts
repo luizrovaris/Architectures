@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Billing } from '../model/billing';
 import { Customer } from '../model/Customer';
 import { BillingService } from '../services/billing/billing.service';
@@ -50,7 +49,7 @@ export class BillingComponent implements OnInit {
         error => {
           console.log(error.error);
         }
-    );
+      );
   }
 
   public selectCustomerChanged() {
