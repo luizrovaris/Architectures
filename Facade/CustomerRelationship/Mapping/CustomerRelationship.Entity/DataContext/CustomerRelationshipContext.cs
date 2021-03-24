@@ -31,11 +31,11 @@ namespace CustomerRelationship.Entity.DataContext
 
                 builder.HasOne(p => p.Address);
 
-                builder.HasMany(p => p.Billings)
-                    .WithOne(p => p.Customer)
-                    .HasForeignKey(p => p.CustomerId)
-                    .IsRequired(false)
-                    .OnDelete(DeleteBehavior.NoAction);
+                //builder.HasMany(p => p.Billings)
+                //    .WithOne(p => p.Customer)
+                //    .HasForeignKey(p => p.CustomerId)
+                //    .IsRequired(false)
+                //    .OnDelete(DeleteBehavior.NoAction);
 
                 builder.HasMany(p => p.Contacts);
                     //.WithOne(p => p.Customer)
@@ -76,6 +76,8 @@ namespace CustomerRelationship.Entity.DataContext
                 builder.Property(p => p.DiscountValue)
                     .IsRequired(false)
                     .HasColumnType("decimal(19,2)");
+
+                builder.HasOne(p => p.Customer);
             });
 
             modelBuilder.Entity<Contact>(builder =>

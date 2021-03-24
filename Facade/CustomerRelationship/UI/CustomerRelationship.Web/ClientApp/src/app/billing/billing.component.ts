@@ -50,10 +50,11 @@ export class BillingComponent implements OnInit {
         error => {
           console.log(error.error);
         }
-      );
+    );
   }
 
   public selectCustomerChanged() {
+    this.billing.customerId = this.selectedCustomer.id;
     this.billing.customer = this.selectedCustomer;
   }
 }

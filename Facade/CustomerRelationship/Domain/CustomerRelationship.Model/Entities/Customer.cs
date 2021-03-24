@@ -8,7 +8,7 @@ namespace CustomerRelationship.Model.Entities
         public Customer()
         {
             this.Contacts = new List<Contact>();
-            this.Billings = new List<Billing>();
+            //this.Billings = new List<Billing>();
         }
 
         public string Name { get; set; }
@@ -18,6 +18,6 @@ namespace CustomerRelationship.Model.Entities
         public virtual Address Address { get; set; }
 
         public virtual IList<Contact> Contacts { get; set; }
-        public virtual IList<Billing> Billings { get; set; }
+        //public virtual IList<Billing> Billings { get; set; }
     }
 }

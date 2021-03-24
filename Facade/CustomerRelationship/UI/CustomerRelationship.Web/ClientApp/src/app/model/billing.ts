@@ -2,7 +2,6 @@ import { Customer } from "./Customer";
 
 export class Billing {
   public id: number;
-  public customer: Customer;
   public invoiceNumber: string;
   public emissionDate: Date;
   public dueDate: Date;
@@ -12,4 +11,7 @@ export class Billing {
   public receiptValue?: number;
   public increasedValue?: number;
   public discountValue?: number;
+
+  public customerId: number;
+  public customer: Customer;
 }
