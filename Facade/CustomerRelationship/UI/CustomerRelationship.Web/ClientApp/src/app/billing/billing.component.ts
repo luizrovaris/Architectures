@@ -31,7 +31,7 @@ export class BillingComponent implements OnInit {
       .subscribe(
         () => {
           this.activateSpinner = false;
-          this.router.navigate(['/customer-search']);
+          this.router.navigate(['/account-receivable']);
         },
         error => {
           this.message = error.error;
@@ -53,7 +53,6 @@ export class BillingComponent implements OnInit {
   }
 
   public selectCustomerChanged() {
-    this.billing.customerId = this.selectedCustomer.id;
     this.billing.customer = this.selectedCustomer;
   }
 }

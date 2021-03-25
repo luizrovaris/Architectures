@@ -32,7 +32,6 @@ export class AccountReceivableComponent {
         discountValue: 0,
         increasedValue: 0,
         receiptValue: 0,
-        customerId: 1,
         customer: {
           id: 1,
           federalIdentification: "1234",
@@ -52,7 +51,6 @@ export class AccountReceivableComponent {
         discountValue: 0,
         increasedValue: 0,
         receiptValue: 0,
-        customerId: 2,
         customer: {
           id: 2,
           federalIdentification: "1235",
