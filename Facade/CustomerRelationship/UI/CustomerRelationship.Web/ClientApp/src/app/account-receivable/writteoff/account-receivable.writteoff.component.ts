@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Billing } from "../../model/billing";
+import { BillingService } from "../../services/billing/billing.service";
 
 @Component({
   selector: "account-receivable-writteoff",
@@ -9,8 +11,9 @@ import { Billing } from "../../model/billing";
 export class AccountReceivableWritteoffComponent implements OnInit {
   public billing: Billing;
   public activateSpinner: boolean;
+  public message: string;
 
-  constructor() {
+  constructor(private billingService: BillingService, private router: Router) {
   }
   ngOnInit(): void {
     var billingOnSession = sessionStorage.getItem("billingSession");
@@ -22,6 +25,17 @@ export class AccountReceivableWritteoffComponent implements OnInit {
 
   public save() {
     this.activateSpinner = true;
-    //Service -> save
+
+    this.billingService.saveBilling(this.billing)
+      .subscribe(
+        () => {
+          this.activateSpinner = false;
+          this.router.navigate(['/account-receivable']);
+        },
+        error => {
+          this.message = error.error;
+          this.activateSpinner = false;
+        }
+      );
   }
 }
