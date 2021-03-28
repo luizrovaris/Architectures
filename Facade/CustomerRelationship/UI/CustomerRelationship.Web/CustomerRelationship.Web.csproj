@@ -35,8 +35,9 @@
     <None Remove="ClientApp\src\app\customer\register\contact\customer.register.contact.component.ts" />
     <None Remove="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
-    <None Remove="ClientApp\src\app\dashboard\closed-billing\dashboard - Copy.closed-billing.component.ts" />
-    <None Remove="ClientApp\src\app\dashboard\closed-billing\dashboard.closed-billing.component.ts" />
+    <None Remove="ClientApp\src\app\dashboard\billing\dashboard - Copy.closed-billing.component.ts" />
+    <None Remove="ClientApp\src\app\dashboard\billing\dashboard.billing.component.ts" />
+    <None Remove="ClientApp\src\app\dashboard\customer\dashboard.customer.component.ts" />
     <None Remove="ClientApp\src\app\helpers\custom.date.adapter.ts" />
     <None Remove="ClientApp\src\app\helpers\custom.date.parser.formatter.ts" />
     <None Remove="ClientApp\src\app\model\address.ts" />
@@ -57,10 +58,11 @@
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\contact\customer.register.contact.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\register\customer.register.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\customer\search\customer.search.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dashboard\customer\dashboard.customer.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\dashboard\dashboard.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="ClientApp\src\app\dashboard\closed-billing\dashboard.closed-billing.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dashboard\billing\dashboard.billing.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\helpers\custom.date.adapter.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\helpers\custom.date.parser.formatter.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\address.ts" />
@@ -71,11 +73,6 @@
     <TypeScriptCompile Include="ClientApp\src\app\model\customer.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\billing\billing.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\customer\customer.service.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\app\dashboard\customer\" />
-    <Folder Include="ClientApp\src\app\dashboard\open-billing\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

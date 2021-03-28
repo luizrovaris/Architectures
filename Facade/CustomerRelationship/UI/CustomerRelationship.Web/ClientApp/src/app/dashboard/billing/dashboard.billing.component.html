@@ -1,0 +1,24 @@
+
+<h4>Open Billings</h4>
+<hr class="mb-3" />
+<ol class="list-group list-group list-group-scrollable">
+  <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let ob of openBillings">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{ob.invoiceNumber}}</div>
+      {{ob.dueDate}}
+    </div>
+    <span class="badge bg-secondary rounded-pill">{{ob.value}}</span>
+  </li>
+</ol>
+
+<h4>Closed Billings</h4>
+<hr class="mb-3" />
+<ol class="list-group list-group list-group-scrollable">
+  <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let cb of closedBillings">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{cb.invoiceNumber}}</div>
+      {{cb.dueDate}}
+    </div>
+    <span class="badge bg-secondary rounded-pill">{{cb.value}}</span>
+  </li>
+</ol>

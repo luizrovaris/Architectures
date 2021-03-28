@@ -20,7 +20,8 @@ import { BillingService } from './services/billing/billing.service';
 import { CustomDateAdapter } from './helpers/custom.date.adapter';
 import { CustomDateParserFormatter } from './helpers/custom.date.parser.formatter';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardClosedBillingComponent } from './dashboard/closed-billing/dashboard.closed-billing.component';
+import { DashboardBillingComponent } from './dashboard/billing/dashboard.billing.component';
+import { DashboardCustomerComponent } from './dashboard/customer/dashboard.customer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DashboardClosedBillingComponent } from './dashboard/closed-billing/dash
     CustomerSearchComponent,
     CustomerRegisterComponent,
     CustomerRegisterContactComponent,
-    DashboardClosedBillingComponent,
+    DashboardBillingComponent,
+    DashboardCustomerComponent,
     DashboardComponent
   ],
   imports: [
