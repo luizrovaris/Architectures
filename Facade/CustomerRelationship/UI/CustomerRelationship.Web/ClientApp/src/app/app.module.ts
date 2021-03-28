@@ -19,6 +19,8 @@ import { CustomerService } from './services/customer/customer.service';
 import { BillingService } from './services/billing/billing.service';
 import { CustomDateAdapter } from './helpers/custom.date.adapter';
 import { CustomDateParserFormatter } from './helpers/custom.date.parser.formatter';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardClosedBillingComponent } from './dashboard/closed-billing/dashboard.closed-billing.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CustomDateParserFormatter } from './helpers/custom.date.parser.formatte
     BillingComponent,
     CustomerSearchComponent,
     CustomerRegisterComponent,
-    CustomerRegisterContactComponent 
+    CustomerRegisterContactComponent,
+    DashboardClosedBillingComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

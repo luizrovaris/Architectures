@@ -1,0 +1,12 @@
+
+<h4>Customers</h4>
+<hr class="mb-3"/>
+<ol class="list-group list-group list-group-scrollable">
+  <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let c of customers">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{c.name}}</div>
+      {{c.contacts.length == 0 ? '--' : c.contacts[0].email}}
+    </div>
+    <span class="badge bg-secondary rounded-pill">{{c.federalIdentification}}</span>
+  </li>
+</ol>

@@ -1,0 +1,5 @@
+.list-group-scrollable {
+  overflow: auto;
+  max-height: 85%;
+  list-style-type: none
+}
