@@ -1,5 +1,20 @@
-.list-group-scrollable {
+.card {
   overflow: auto;
-  max-height: 43%;
-  list-style-type: none
+  max-height: 15rem;
+  margin-bottom: 5px;
 }
+
+.card .col-sm-12 h6 {
+  margin-top: 0.25rem;
+}
+
+.font-weight-bold,
+.font-weight-light {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+.list-group-item {
+  padding: 0.25rem 0.75rem;
+}
+
