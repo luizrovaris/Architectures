@@ -18,3 +18,19 @@
   padding: 0.25rem 0.75rem;
 }
 
+.text-danger {
+  color: #ff6347 !important;
+}
+
+.bg-danger {
+  background-color: #FFA07A !important;
+}
+
+.bg-success {
+  background-color: #9AFF9A !important;
+}
+
+.text-success {
+  color: #7CCD7C !important;
+}
+
