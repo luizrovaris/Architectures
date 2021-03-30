@@ -1,3 +1,12 @@
+.form-control {
+  background-color: transparent;
+}
+
+.field-group {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+
 .form-control-second-margin{
     margin-left: 5px;
 }
