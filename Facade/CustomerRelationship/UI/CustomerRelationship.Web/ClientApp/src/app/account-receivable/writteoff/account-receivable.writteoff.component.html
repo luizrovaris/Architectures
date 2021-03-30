@@ -1,56 +1,70 @@
-<form class="form-control">
+<form class="form-control border-0">
   <h1 class="h4 title">Writte-off title</h1>
 
-  <label for="inputCustomer" class="sr-only">Customer</label>
-  <input type="text" id="inputCustomer" name="customerName" placeholder="Customer's name"
-         class="form-control mb-2 col-md-6" [(ngModel)]="billing.customer.name" #customerName="ngModel"
-         readonly />
-
-  <label for="inputInvoice" class="sr-only">Invoice</label>
-  <input type="text" id="inputInvoice" name="inputInvoice" placeholder="Invoice number"
-         class="form-control mb-2 col-md-6" [(ngModel)]="billing.invoiceNumber" #invoice="ngModel"
-         readonly />
-
-  <div class="form-inline mb-2 col-md-3">
-    <div class="form-group">
-      <div class="input-group">
-        <input class="form-control" placeholder="Payment Date"
-               name="datepickerBillingPaymentDate" [(ngModel)]="billing.paymentDate" ngbDatepicker #paymentDate="ngbDatepicker">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary calendar" (click)="paymentDate.toggle()" type="button"></button>
+  <div class="col-md-8 field-group rounded">
+    <h5>Billing information</h5>
+    <hr class="mb-2 col-md-11" />
+    <div class="mb-2 col-md-12">
+      <label for="inputCustomer" class="sr-only">Customer</label>
+      <input type="text" id="inputCustomer" name="customerName" placeholder="Customer's name"
+             class="form-control" [(ngModel)]="billing.customer.name"
+             #customerName="ngModel"
+             readonly />
+    </div>
+    <div class="mb-2 col-md-12">
+      <label for="inputInvoice" class="sr-only">Invoice</label>
+      <input type="text" id="inputInvoice" name="inputInvoice" placeholder="Invoice number"
+             class="form-control" [(ngModel)]="billing.invoiceNumber"
+             #invoice="ngModel"
+             readonly />
+    </div>
+    <div class="form-inline mb-2 col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" placeholder="Payment Date"
+                 name="datepickerBillingPaymentDate" [(ngModel)]="billing.paymentDate"
+                 ngbDatepicker #paymentDate="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="paymentDate.toggle()" type="button"></button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <label for="inputReceiptValue" class="sr-only">Receipt Value</label>
-  <input type="text" id="inputReceiptValue" name="billingReceiptValue" placeholder="Receipt Value"
-         class="form-control mb-2 col-md-6" [ngModel]="billing.receiptValue | number: '1.2-2'"
-         (ngModelChange)="billing.receiptValue = $event" #receiptValue="ngModel"
-         required />
-
-  <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
-  <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
-         class="form-control mb-2 col-md-6" [ngModel]="billing.increasedValue | number: '1.2-2'"
-         (ngModelChange)="billing.increasedValue = $event" #increasedValue="ngModel"
-         required />
-
-  <label for="inputDiscountValue" class="sr-only">Discount Value</label>
-  <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
-         class="form-control mb-2 col-md-6" [ngModel]="billing.discountValue | number: '1.2-2'"
-         (ngModelChange)="billing.discountValue = $event" #discountValue="ngModel"
-         required />
-
-  <div class="btn-group mb-2">
-    <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
-      <span class="spinner-border spinner-border-sm" *ngIf="activateSpinner"></span>
-      Save
-    </button>
-    <button class="btn btn-secondary" [routerLink]="['/account-receivable']">
-      Cancel
-    </button>
-  </div>
-  <div class="alert alert-danger col-md-6" *ngIf="message">
-    {{message}}
+    <div class="mb-2 col-md-12">
+      <label for="inputReceiptValue" class="sr-only">Receipt Value</label>
+      <input type="text" id="inputReceiptValue" name="billingReceiptValue" placeholder="Receipt Value"
+             class="form-control" [ngModel]="billing.receiptValue | number: '1.2-2'"
+             (ngModelChange)="billing.receiptValue = $event"
+             #receiptValue="ngModel"
+             required />
+    </div>
+    <div class="mb-2 col-md-12">
+      <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
+      <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
+             class="form-control" [ngModel]="billing.increasedValue | number: '1.2-2'"
+             (ngModelChange)="billing.increasedValue = $event"
+             #increasedValue="ngModel"
+             required />
+    </div>
+    <div class="mb-2 col-md-12">
+      <label for="inputDiscountValue" class="sr-only">Discount Value</label>
+      <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
+             class="form-control" [ngModel]="billing.discountValue | number: '1.2-2'"
+             (ngModelChange)="billing.discountValue = $event"
+             #discountValue="ngModel"
+             required />
+    </div>
+    <div class="btn-group mb-2">
+      <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
+        <span class="spinner-border spinner-border-sm" *ngIf="activateSpinner"></span>
+        Save
+      </button>
+      <button class="btn btn-secondary" [routerLink]="['/account-receivable']">
+        Cancel
+      </button>
+    </div>
+    <div class="alert alert-danger col-md-6" *ngIf="message">
+      {{message}}
+    </div>
   </div>
 </form>
