@@ -1,4 +1,4 @@
-<form class="form-control border-0">
+<form class="form-control border-0" #billingFormGroup="ngForm">
   <p class="h4 title mb-4">Billing</p>
 
   <div class="col-md-8 field-group rounded">
@@ -82,7 +82,7 @@
     </div>
 
     <div class="btn-group mb-2">
-      <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">
+      <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="!billingFormGroup.valid || activateSpinner">
         <span class="spinner-border spinner-border-sm" *ngIf="activateSpinner"></span>
         Save
       </button>
