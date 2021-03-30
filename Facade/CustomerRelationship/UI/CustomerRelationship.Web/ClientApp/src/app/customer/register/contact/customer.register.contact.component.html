@@ -1,4 +1,4 @@
-<div class="row mb-2 col-md-8">
+<div class="row mb-2 col-md-12">
   <div class="col-md-6">
     <input type="text" aria-label="Contact" name="customerContact" placeholder="Contact"
            class="form-control" [(ngModel)]="contact.name"
@@ -33,7 +33,7 @@
     </div>
   </div>
 </div>
-<div class="row mb-2 col-md-8">
+<div class="row mb-2 col-md-12">
   <div class="col-md-6">
     <input type="text" aria-label="Phone" name="customerPhone" placeholder="Phone"
            class="form-control" [(ngModel)]="contact.phone">
@@ -51,7 +51,7 @@
     Add contact
   </button>
 </div>
-<div class="row mb-2 col-md-8">
+<div class="row mb-2 col-md-12">
   <table class="table table-hover" *ngIf="contacts">
     <thead>
       <tr class="d-flex">
@@ -79,7 +79,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="alert alert-danger col-md-8" *ngIf="contactMessage">
+  <div class="alert alert-danger col-md-12" *ngIf="contactMessage">
     {{contactMessage}}
   </div>
 </div>
