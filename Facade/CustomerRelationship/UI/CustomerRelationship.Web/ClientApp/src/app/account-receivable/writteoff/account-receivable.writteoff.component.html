@@ -36,7 +36,16 @@
              class="form-control" [ngModel]="billing.receiptValue | number: '1.2-2'"
              (ngModelChange)="billing.receiptValue = $event"
              #receiptValue="ngModel"
+             [ngClass]="{
+            'is-invalid': receiptValue.invalid && (receiptValue.dirty || receiptValue.touched),
+            'is-valid': receiptValue.valid
+           }"
              required />
+      <div class="invalid-feedback mb-2" *ngIf="receiptValue.invalid && (receiptValue.dirty || receiptValue.touched)">
+        <div *ngIf="receiptValue.errors.required">
+          Receipt value is required
+        </div>
+      </div>
     </div>
     <div class="mb-2 col-md-12">
       <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
