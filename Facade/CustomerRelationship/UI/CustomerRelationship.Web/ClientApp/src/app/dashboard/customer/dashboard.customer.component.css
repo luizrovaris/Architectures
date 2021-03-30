@@ -1,6 +1,7 @@
 .card {
   overflow: auto;
-  max-height: 30rem;
+  min-height: 32rem;
+  max-height: 32rem;
 }
 
   .card .col-sm-12 h6 {

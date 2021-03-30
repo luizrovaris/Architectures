@@ -1,7 +1,8 @@
 .card {
   overflow: auto;
+  min-height: 15rem;
   max-height: 15rem;
-  margin-bottom: 5px;
+  margin-bottom: 2rem;
 }
 
 .card .col-sm-12 h6 {
@@ -23,14 +24,14 @@
 }
 
 .bg-danger {
-  background-color: #FFA07A !important;
+  background-color: #FFDAB9 !important;
 }
 
 .bg-success {
-  background-color: #9AFF9A !important;
+  background-color: #C1FFC1 !important;
 }
 
 .text-success {
-  color: #7CCD7C !important;
+  color: #32CD32 !important;
 }
 
