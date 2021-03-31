@@ -1,5 +1,4 @@
 <p class="h4 mb-2">Account Receivable</p>
-<p *ngIf="!billings">Loading...</p>
 
 <div class="container-fluid">
   <table class="table table-hover" *ngIf="billings">
@@ -30,4 +29,7 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div class="text-center" *ngIf="!billings">
+  <img src="/assets/images/eclipse_t.gif" />
 </div>
