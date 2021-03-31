@@ -1,12 +1,15 @@
 <div class="card card-body flex-fill">
   <div class="col-sm-12">
     <h6>Customers</h6>
-    <ol class="list-group list-group-flush">
+    <ol class="list-group list-group-flush" *ngIf="customers">
       <li class="list-group-item" *ngFor="let c of customers">
         <span class="badge bg-secondary rounded-pill float-right">{{c.federalIdentification}}</span>
         <p class="font-weight-bold"><i class="fa fa-user"></i> {{c.name}}</p>
         <p class="font-weight-light">{{c.contacts.length == 0 ? '--' : c.contacts[0].email}}</p>
       </li>
     </ol>
+    <div class="text-center" *ngIf="!customers">
+      <img src="/assets/images/eclipse_sm.gif" />
+    </div>
   </div>
 </div>
