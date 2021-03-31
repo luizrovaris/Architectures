@@ -1,24 +1,30 @@
 <div class="card card-body flex-fill">
   <div class="col-sm-12">
     <h6>Open Billings</h6>
-    <ol class="list-group list-group-flush">
+    <ol class="list-group list-group-flush" *ngIf="openBillings">
       <li class="list-group-item" *ngFor="let ob of openBillings">
         <span class="badge bg-danger rounded-pill float-right">$ {{ob.value | number:'1.2-2'}}</span>
         <p class="font-weight-bold"><i class="fa fa-file text-danger"></i><strong> Invoice</strong> {{ob.invoiceNumber}}</p>
         <p class="font-weight-light"><strong>Due Date:</strong> {{ob.dueDate | date: 'dd/MM/yyyy'}}</p>
       </li>
     </ol>
+    <div class="text-center" *ngIf="!openBillings">
+      <img src="/assets/images/eclipse_sm.gif" />
+    </div>
   </div>
 </div>
 <div class="card card-body flex-fill">
   <div class="col-sm-12">
     <h6>Closed Billings</h6>
-    <ol class="list-group list-group-flush">
+    <ol class="list-group list-group-flush" *ngIf="closedBillings">
       <li class="list-group-item" *ngFor="let cb of closedBillings">
         <span class="badge bg-success rounded-pill float-right">$ {{cb.value | number:'1.2-2'}}</span>
         <p class="font-weight-bold"><i class="fa fa-file text-success"></i><strong> Invoice</strong> {{cb.invoiceNumber}}</p>
         <p class="font-weight-light"><strong>Payment Date:</strong> {{cb.paymentDate | date: 'dd/MM/yyyy'}}</p>
       </li>
     </ol>
+    <div class="text-center" *ngIf="!closedBillings">
+      <img src="/assets/images/eclipse_sm.gif" />
+    </div>
   </div>
 </div>
