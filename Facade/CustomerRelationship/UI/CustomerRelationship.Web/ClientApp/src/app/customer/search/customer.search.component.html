@@ -1,5 +1,4 @@
 <p class="h4 mb-2">Customers Search</p>
-<p *ngIf="!customers">Loading...</p>
 
 <button class="btn btn-primary mb-2" (click)="addCustomer()">Add</button>
 <div class="container-fluid">
@@ -26,4 +25,7 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div class="text-center" *ngIf="!customers">
+  <img src="/assets/images/eclipse_t.gif" />
 </div>
