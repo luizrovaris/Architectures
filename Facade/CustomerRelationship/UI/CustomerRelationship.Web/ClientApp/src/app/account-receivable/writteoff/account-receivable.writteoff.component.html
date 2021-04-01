@@ -30,12 +30,20 @@
         </div>
       </div>
     </div>
-    <div class="mb-2 col-md-12">
+    <div class="mb-2 col-md-6">
+      <label for="inputInvoiceValue" class="sr-only">Invoice Value</label>
+      <input type="text" id="inputInvoiceValue" name="inputInvoiceValue" placeholder="Invoice Value"
+             class="form-control" [(ngModel)]="billing.value"
+             #invoiceValue="ngModel"
+             readonly />
+    </div>
+    <div class="mb-2 col-md-6">
       <label for="inputReceiptValue" class="sr-only">Receipt Value</label>
       <input type="text" id="inputReceiptValue" name="billingReceiptValue" placeholder="Receipt Value"
              class="form-control" [ngModel]="billing.receiptValue | number: '1.2-2'"
              (ngModelChange)="billing.receiptValue = $event"
              #receiptValue="ngModel"
+             (blur)="onValueReceipted()"
              [ngClass]="{
             'is-invalid': receiptValue.invalid && (receiptValue.dirty || receiptValue.touched),
             'is-valid': receiptValue.valid
@@ -47,21 +55,33 @@
         </div>
       </div>
     </div>
-    <div class="mb-2 col-md-12">
-      <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
-      <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
-             class="form-control" [ngModel]="billing.increasedValue | number: '1.2-2'"
-             (ngModelChange)="billing.increasedValue = $event"
-             #increasedValue="ngModel"
-             required />
+    <div class="form-inline mb-2 col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
+          <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
+                 class="form-control col-md-4" [ngModel]="billing.increasedValue | number: '1.2-2'"
+                 (ngModelChange)="billing.increasedValue = $event"
+                 #increasedValue="ngModel"
+                 (blur)="onValueAdittionalChanged()"
+                 required />
+
+          <label for="inputDiscountValue" class="sr-only">Discount Value</label>
+          <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
+                 class="form-control col-md-4" [ngModel]="billing.discountValue | number: '1.2-2'"
+                 (ngModelChange)="billing.discountValue = $event"
+                 #discountValue="ngModel"
+                 (blur)="onValueAdittionalChanged()"
+                 required />
+        </div>
+      </div>
     </div>
-    <div class="mb-2 col-md-12">
-      <label for="inputDiscountValue" class="sr-only">Discount Value</label>
-      <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
-             class="form-control" [ngModel]="billing.discountValue | number: '1.2-2'"
-             (ngModelChange)="billing.discountValue = $event"
-             #discountValue="ngModel"
-             required />
+    <div class="mb-2 col-md-6">
+      <label for="inputInvoiceTotal" class="sr-only">Total Value</label>
+      <input type="text" id="inputInvoiceTotal" name="inputInvoiceTotal" placeholder="Total Value"
+             class="form-control" [(ngModel)]="billing.totalValue"
+             #invoiceTotal="ngModel"
+             readonly />
     </div>
     <div class="btn-group mb-2">
       <button class="btn btn-primary" (click)="save()" [disabled]="activateSpinner">

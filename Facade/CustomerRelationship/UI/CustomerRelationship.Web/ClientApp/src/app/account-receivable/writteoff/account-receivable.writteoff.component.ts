@@ -19,6 +19,12 @@ export class AccountReceivableWritteoffComponent implements OnInit {
     var billingOnSession = sessionStorage.getItem("billingSession");
     if (billingOnSession) {
       this.billing = JSON.parse(billingOnSession);
+      if (this.billing != null) {
+        this.billing.receiptValue = this.billing.value;
+        this.billing.increasedValue = 0;
+        this.billing.discountValue = 0;
+        this.billing.totalValue = this.billing.value;
+      }
       sessionStorage.setItem("billingSession", null);
     }
   }
@@ -37,5 +43,24 @@ export class AccountReceivableWritteoffComponent implements OnInit {
           this.activateSpinner = false;
         }
       );
+  }
+
+  public onValueReceipted() {
+    if (this.billing.receiptValue > this.billing.value) {
+      this.billing.increasedValue = this.billing.receiptValue - this.billing.value;
+      this.billing.receiptValue = this.billing.value;
+      this.billing.discountValue = 0;
+    } else if (this.billing.receiptValue < this.billing.value) {
+      this.billing.discountValue = this.billing.value - this.billing.receiptValue;
+      this.billing.receiptValue = this.billing.value;
+      this.billing.increasedValue = 0;
+    } else {
+      this.billing.increasedValue = 0;
+      this.billing.discountValue = 0;
+    }
+  }
+
+  public onValueAdittionalChanged() {
+    this.billing.totalValue = this.billing.receiptValue + this.billing.increasedValue - this.billing.discountValue;
   }
 }

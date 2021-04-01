@@ -11,6 +11,7 @@ export class Billing {
   public receiptValue?: number;
   public increasedValue?: number;
   public discountValue?: number;
+  public totalValue?: number;
 
   public customer: Customer;
 }
