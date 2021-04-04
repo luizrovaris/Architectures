@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -22,6 +23,8 @@ import { CustomDateParserFormatter } from './helpers/custom.date.parser.formatte
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardBillingComponent } from './dashboard/billing/dashboard.billing.component';
 import { DashboardCustomerComponent } from './dashboard/customer/dashboard.customer.component';
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { DashboardCustomerComponent } from './dashboard/customer/dashboard.custo
     NgbModule,
     FormsModule,
     FontAwesomeModule,
+    NgxMaskModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'account-receivable', component: AccountReceivableComponent },
