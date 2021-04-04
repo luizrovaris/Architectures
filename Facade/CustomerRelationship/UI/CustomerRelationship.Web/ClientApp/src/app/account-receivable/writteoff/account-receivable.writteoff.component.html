@@ -40,7 +40,8 @@
     <div class="mb-2 col-md-6">
       <label for="inputReceiptValue" class="sr-only">Receipt Value</label>
       <input type="text" id="inputReceiptValue" name="billingReceiptValue" placeholder="Receipt Value"
-             class="form-control" [ngModel]="billing.receiptValue | number: '1.2-2'"
+             class="form-control" [ngModel]="billing.receiptValue"
+             mask="separator.2" separatorLimit="1000"
              (ngModelChange)="billing.receiptValue = $event"
              #receiptValue="ngModel"
              (blur)="onValueReceipted()"
@@ -60,7 +61,8 @@
         <div class="input-group">
           <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
           <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
-                 class="form-control col-md-4" [ngModel]="billing.increasedValue | number: '1.2-2'"
+                 class="form-control col-md-4" [ngModel]="billing.increasedValue"
+                 mask="separator.2" separatorLimit="1000"
                  (ngModelChange)="billing.increasedValue = $event"
                  #increasedValue="ngModel"
                  (blur)="onValueAdittionalChanged()"
@@ -80,6 +82,7 @@
       <label for="inputInvoiceTotal" class="sr-only">Total Value</label>
       <input type="text" id="inputInvoiceTotal" name="inputInvoiceTotal" placeholder="Total Value"
              class="form-control" [(ngModel)]="billing.totalValue"
+             mask="separator.2" separatorLimit="1000"
              #invoiceTotal="ngModel"
              readonly />
     </div>
