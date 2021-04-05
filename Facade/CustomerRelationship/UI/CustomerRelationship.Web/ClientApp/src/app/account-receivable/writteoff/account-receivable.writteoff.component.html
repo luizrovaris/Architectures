@@ -56,21 +56,23 @@
         </div>
       </div>
     </div>
-    <div class="form-inline mb-2 col-md-6">
-      <div class="form-group">
-        <div class="input-group">
-          <label for="inputIncreasedValue" class="sr-only">Increased Value</label>
+    <div class="mb-2 col-md-6">
+      <div class="row">
+        <div class="form-floating col-md-6">
+          <label for="inputIncreasedValue">Increased Value</label>
           <input type="text" id="inputIncreasedValue" name="billingIncreasedValue" placeholder="Increased Value"
-                 class="form-control col-md-4" [ngModel]="billing.increasedValue"
+                 class="form-control" [ngModel]="billing.increasedValue"
                  mask="separator.2" separatorLimit="1000"
                  (ngModelChange)="billing.increasedValue = $event"
                  #increasedValue="ngModel"
                  (blur)="onValueAdittionalChanged()"
                  required />
-
+        </div>
+        <div class="col-md-6">
           <label for="inputDiscountValue" class="sr-only">Discount Value</label>
           <input type="text" id="inputDiscountValue" name="billingDiscountValue" placeholder="Discount Value"
-                 class="form-control col-md-4" [ngModel]="billing.discountValue | number: '1.2-2'"
+                 class="form-control" [ngModel]="billing.discountValue"
+                 mask="separator.2" separatorLimit="1000"
                  (ngModelChange)="billing.discountValue = $event"
                  #discountValue="ngModel"
                  (blur)="onValueAdittionalChanged()"
