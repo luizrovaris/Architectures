@@ -2,10 +2,12 @@
   <div class="col-sm-12">
     <h6>Open Billings</h6>
     <ol class="list-group list-group-flush" *ngIf="openBillings">
-      <li class="list-group-item" *ngFor="let ob of openBillings">
+      <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let ob of openBillings">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold"><p class="font-weight-bold"><i class="fa fa-file text-danger"></i><strong> Invoice</strong> {{ob.invoiceNumber}}</p></div>
+          <p class="font-weight-light"><strong>Due Date:</strong> {{ob.dueDate | date: 'dd/MM/yyyy'}}</p>
+        </div>
         <span class="badge bg-danger rounded-pill float-right">$ {{ob.value | number:'1.2-2'}}</span>
-        <p class="font-weight-bold"><i class="fa fa-file text-danger"></i><strong> Invoice</strong> {{ob.invoiceNumber}}</p>
-        <p class="font-weight-light"><strong>Due Date:</strong> {{ob.dueDate | date: 'dd/MM/yyyy'}}</p>
       </li>
     </ol>
     <div class="text-center" *ngIf="!openBillings">
@@ -17,10 +19,12 @@
   <div class="col-sm-12">
     <h6>Closed Billings</h6>
     <ol class="list-group list-group-flush" *ngIf="closedBillings">
-      <li class="list-group-item" *ngFor="let cb of closedBillings">
+      <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let cb of closedBillings">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold"><p class="font-weight-bold"><i class="fa fa-file text-success"></i><strong> Invoice</strong> {{cb.invoiceNumber}}</p></div>
+          <p class="font-weight-light"><strong>Payment Date:</strong> {{cb.paymentDate | date: 'dd/MM/yyyy'}}</p>
+        </div>
         <span class="badge bg-success rounded-pill float-right">$ {{cb.value | number:'1.2-2'}}</span>
-        <p class="font-weight-bold"><i class="fa fa-file text-success"></i><strong> Invoice</strong> {{cb.invoiceNumber}}</p>
-        <p class="font-weight-light"><strong>Payment Date:</strong> {{cb.paymentDate | date: 'dd/MM/yyyy'}}</p>
       </li>
     </ol>
     <div class="text-center" *ngIf="!closedBillings">
