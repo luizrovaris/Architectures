@@ -34,13 +34,13 @@
           <input class="form-control" placeholder="Emission Date"
                  name="datepickerBillingEmissionDate" [(ngModel)]="billing.emissionDate" ngbDatepicker #emissionDate="ngbDatepicker">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="emissionDate.toggle()" type="button"></button>
+            <button class="btn btn-outline-secondary fa fa-calendar" (click)="emissionDate.toggle()" type="button"></button>
           </div>
 
           <input class="form-control form-control-second-margin" placeholder="Due Date"
                  name="datepickerBillingDueDate" [(ngModel)]="billing.dueDate" ngbDatepicker #dueDate="ngbDatepicker">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="dueDate.toggle()" type="button"></button>
+            <button class="btn btn-outline-secondary fa fa-calendar" (click)="dueDate.toggle()" type="button"></button>
           </div>
         </div>
       </div>
