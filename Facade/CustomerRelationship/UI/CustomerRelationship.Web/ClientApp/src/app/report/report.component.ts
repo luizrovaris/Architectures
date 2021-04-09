@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Customer } from "../model/Customer";
 
 @Component({
   selector: "report",
@@ -6,5 +7,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./report.component.css"]
 })
 export class ReportComponent {
+  public customers: Customer[];
 
 }
