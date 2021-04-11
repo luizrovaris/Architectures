@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>CustomerRelationship.Domain</RootNamespace>
+    <AssemblyName>CustomerRelationship.Domain</AssemblyName>
+  </PropertyGroup>
+
+</Project>
