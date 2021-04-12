@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>CustomerRelationship.Application.UnitTests</RootNamespace>
-    <AssemblyName>CustomerRelationship.Application.UnitTests</AssemblyName>
+    <RootNamespace>CustomerRelationship.Domain.UnitTests</RootNamespace>
+    <AssemblyName>CustomerRelationship.Domain.UnitTests</AssemblyName>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -16,12 +16,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
-    <PackageReference Include="Moq" Version="4.15.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Application\Application.csproj" />
-    <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Domain\CustomerRelationship.Domain.csproj" />
   </ItemGroup>
 
 </Project>
