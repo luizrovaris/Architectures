@@ -39,8 +39,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\model\customer.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Application\CustomerRelationship.Application.csproj" />
     <ProjectReference Include="..\Infrastructure\CustomerRelationship.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\model\customer.ts" />
   </ItemGroup>
 
   <Target Name="NSwag" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
