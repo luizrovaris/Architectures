@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\customer\search\customer.search.component.ts" />
     <None Remove="ClientApp\src\app\model\customer.ts" />
   </ItemGroup>
 
@@ -48,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\customer\search\customer.search.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\customer.ts" />
   </ItemGroup>
 
